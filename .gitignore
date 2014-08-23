@@ -45,5 +45,5 @@ Thumbs.db
 ###########
 .tmp
 *.pyc
-fabfile.py
+private.py
 build/
