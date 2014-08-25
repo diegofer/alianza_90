@@ -4,13 +4,25 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 10;
 }
 .contenedor {
+  position: relative;
   min-height: 400px;
+  z-index: 1;
+  height: 800px;
 }
-.uno {
+.content-uno {
   background: #f00;
+  text-align: center;
 }
-.dos {
+.content-uno #dibujo {
+  position: relative;
+  background: #00f;
+  display: block;
+  top: 10%;
+  font-size: 70px;
+}
+.content-dos {
   background: #00f;
 }
