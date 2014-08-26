@@ -26,10 +26,11 @@ require.config({
 require([
 	'jquery',
 	'backbone', 
+	'app/model/YearsCollection',
 	'app/Router'
 	], 
 
-	function ($, Backbone, Router) {
+	function ($, Backbone, YearsCollection, Router) {
 
 
 		// Metodo para liberar memoria y remover vistas
@@ -43,9 +44,16 @@ require([
 	    };
 
 
+	    var yearsCollection = new YearsCollection();
+		yearsCollection.once('sync', initRouter);
+		yearsCollection.fetch();
 
-		window.router = new Router();
-	    Backbone.history.start();
+
+		function initRouter(data) {
+			window.router = new Router({years:data});
+		    Backbone.history.start();
+		}
+
 	}
 	
 );

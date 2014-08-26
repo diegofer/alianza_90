@@ -1,0 +1,78 @@
+[
+    {   "year": 1920,
+        "subtitle":  "Lorem ipsum dolor sit amet",
+        "review_1": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laetetur vetuit scribi possimus uti nusquam locos mundus consequatur disserunt, ferreum suavitate bonorum prompta infinito semel, torquato deterruisset supplicii putavisset provident, inquit fugiendum respirare utroque utrumvis servata, defendere. Horribiles aliquod nulla, noster. Distinguique, disseretur contereret praesidium, illam renovata dicat turpe angusta solent iactare, patriam videntur errem terentianus falso istae breviter inani. Angore omittendis supplicii omnesque honoris secunda adipiscuntur bonas texit me, poetae deteriora quietus, beatus. Correcta perspici interesse regula, labefactetur totam frui.",
+        "title_2": "Lorem ipsum dolor sit amet",
+        "review_2": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Servare, legendis latinam laborum utilitas fabulas isti finis dolore, labor deleniti, aristotelem dicitis deinde velim magistra didicisse ero perpauca perpauca patientia. Necesse assentior graviterque amputata reperiri existimo, historiae quaeri, tamquam concertationesque quo tradere nullus interrogare multo, fieri restincto venandi deterius legimus consul arbitrantur, legendis patre ocurreret ullo loquuntur prohiberet democrito ullo. Putem, modum terentianus vacare nocet redeamus inviti dicta, ii pedalis aeternum vetuit praeceptrice mors. Nullae putemus turma varias exeduntur vitiis porro.",
+        
+        "img_1": "1920_1.jpg",
+        "img_2": "1920_2.jpg",
+
+        "slide": { 
+            "1": "1920_slide_1.jpg", 
+            "2": "1920_slide_2.jpg", 
+            "3": "1920_slide_3.jpg"
+        }
+    },
+    {   "year": 1921,
+        "subtitle":  "Lorem ipsum dolor sit amet",
+        "review_1": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laetetur vetuit scribi possimus uti nusquam locos mundus consequatur disserunt, ferreum suavitate bonorum prompta infinito semel, torquato deterruisset supplicii putavisset provident, inquit fugiendum respirare utroque utrumvis servata, defendere. Horribiles aliquod nulla, noster. Distinguique, disseretur contereret praesidium, illam renovata dicat turpe angusta solent iactare, patriam videntur errem terentianus falso istae breviter inani. Angore omittendis supplicii omnesque honoris secunda adipiscuntur bonas texit me, poetae deteriora quietus, beatus. Correcta perspici interesse regula, labefactetur totam frui.",
+        "title_2": "Lorem ipsum dolor sit amet",
+        "review_2": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Servare, legendis latinam laborum utilitas fabulas isti finis dolore, labor deleniti, aristotelem dicitis deinde velim magistra didicisse ero perpauca perpauca patientia. Necesse assentior graviterque amputata reperiri existimo, historiae quaeri, tamquam concertationesque quo tradere nullus interrogare multo, fieri restincto venandi deterius legimus consul arbitrantur, legendis patre ocurreret ullo loquuntur prohiberet democrito ullo. Putem, modum terentianus vacare nocet redeamus inviti dicta, ii pedalis aeternum vetuit praeceptrice mors. Nullae putemus turma varias exeduntur vitiis porro.",
+        
+        "img_1": "1920_1.jpg",
+        "img_2": "1920_2.jpg",
+
+        "slide": { 
+            "1": "1920_slide_1.jpg", 
+            "2": "1920_slide_2.jpg", 
+            "3": "1920_slide_3.jpg"
+        }
+    },
+    {   "year": 1922,
+        "subtitle":  "Lorem ipsum dolor sit amet",
+        "review_1": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laetetur vetuit scribi possimus uti nusquam locos mundus consequatur disserunt, ferreum suavitate bonorum prompta infinito semel, torquato deterruisset supplicii putavisset provident, inquit fugiendum respirare utroque utrumvis servata, defendere. Horribiles aliquod nulla, noster. Distinguique, disseretur contereret praesidium, illam renovata dicat turpe angusta solent iactare, patriam videntur errem terentianus falso istae breviter inani. Angore omittendis supplicii omnesque honoris secunda adipiscuntur bonas texit me, poetae deteriora quietus, beatus. Correcta perspici interesse regula, labefactetur totam frui.",
+        "title_2": "Lorem ipsum dolor sit amet",
+        "review_2": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Servare, legendis latinam laborum utilitas fabulas isti finis dolore, labor deleniti, aristotelem dicitis deinde velim magistra didicisse ero perpauca perpauca patientia. Necesse assentior graviterque amputata reperiri existimo, historiae quaeri, tamquam concertationesque quo tradere nullus interrogare multo, fieri restincto venandi deterius legimus consul arbitrantur, legendis patre ocurreret ullo loquuntur prohiberet democrito ullo. Putem, modum terentianus vacare nocet redeamus inviti dicta, ii pedalis aeternum vetuit praeceptrice mors. Nullae putemus turma varias exeduntur vitiis porro.",
+        
+        "img_1": "1920_1.jpg",
+        "img_2": "1920_2.jpg",
+
+        "slide": { 
+            "1": "1920_slide_1.jpg", 
+            "2": "1920_slide_2.jpg", 
+            "3": "1920_slide_3.jpg"
+        }
+    },
+    {   "year": 1923,
+        "subtitle":  "Lorem ipsum dolor sit amet",
+        "review_1": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laetetur vetuit scribi possimus uti nusquam locos mundus consequatur disserunt, ferreum suavitate bonorum prompta infinito semel, torquato deterruisset supplicii putavisset provident, inquit fugiendum respirare utroque utrumvis servata, defendere. Horribiles aliquod nulla, noster. Distinguique, disseretur contereret praesidium, illam renovata dicat turpe angusta solent iactare, patriam videntur errem terentianus falso istae breviter inani. Angore omittendis supplicii omnesque honoris secunda adipiscuntur bonas texit me, poetae deteriora quietus, beatus. Correcta perspici interesse regula, labefactetur totam frui.",
+        "title_2": "Lorem ipsum dolor sit amet",
+        "review_2": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Servare, legendis latinam laborum utilitas fabulas isti finis dolore, labor deleniti, aristotelem dicitis deinde velim magistra didicisse ero perpauca perpauca patientia. Necesse assentior graviterque amputata reperiri existimo, historiae quaeri, tamquam concertationesque quo tradere nullus interrogare multo, fieri restincto venandi deterius legimus consul arbitrantur, legendis patre ocurreret ullo loquuntur prohiberet democrito ullo. Putem, modum terentianus vacare nocet redeamus inviti dicta, ii pedalis aeternum vetuit praeceptrice mors. Nullae putemus turma varias exeduntur vitiis porro.",
+        
+        "img_1": "1920_1.jpg",
+        "img_2": "1920_2.jpg",
+
+        "slide": { 
+            "1": "1920_slide_1.jpg", 
+            "2": "1920_slide_2.jpg", 
+            "3": "1920_slide_3.jpg"
+        }
+    },
+    {   "year": 1924,
+        "subtitle":  "Lorem ipsum dolor sit amet",
+        "review_1": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laetetur vetuit scribi possimus uti nusquam locos mundus consequatur disserunt, ferreum suavitate bonorum prompta infinito semel, torquato deterruisset supplicii putavisset provident, inquit fugiendum respirare utroque utrumvis servata, defendere. Horribiles aliquod nulla, noster. Distinguique, disseretur contereret praesidium, illam renovata dicat turpe angusta solent iactare, patriam videntur errem terentianus falso istae breviter inani. Angore omittendis supplicii omnesque honoris secunda adipiscuntur bonas texit me, poetae deteriora quietus, beatus. Correcta perspici interesse regula, labefactetur totam frui.",
+        "title_2": "Lorem ipsum dolor sit amet",
+        "review_2": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Servare, legendis latinam laborum utilitas fabulas isti finis dolore, labor deleniti, aristotelem dicitis deinde velim magistra didicisse ero perpauca perpauca patientia. Necesse assentior graviterque amputata reperiri existimo, historiae quaeri, tamquam concertationesque quo tradere nullus interrogare multo, fieri restincto venandi deterius legimus consul arbitrantur, legendis patre ocurreret ullo loquuntur prohiberet democrito ullo. Putem, modum terentianus vacare nocet redeamus inviti dicta, ii pedalis aeternum vetuit praeceptrice mors. Nullae putemus turma varias exeduntur vitiis porro.",
+        
+        "img_1": "1920_1.jpg",
+        "img_2": "1920_2.jpg",
+
+        "slide": { 
+            "1": "1920_slide_1.jpg", 
+            "2": "1920_slide_2.jpg", 
+            "3": "1920_slide_3.jpg"
+        }
+    }
+    
+]

@@ -12,8 +12,10 @@ define(function (require) {
 
 	return Backbone.Router.extend({
 
-		initialize: function() {
+		initialize: function(data) {
 			console.log('iniciando router');
+			
+			this.years = data.years;
 
 			var headerView = new HeaderView({ el: $('header')});
 
@@ -32,12 +34,11 @@ define(function (require) {
 			});
 
 			var timeLineView = new TimeLineView({
-				el: $('#section-timeline')
+				el: $('#section-timeline'),
+				collection: this.years
 			});
 			
-			homeView.on('scrollgo', function(argumento){
-				console.log(argumento)
-			}, this);
+			
 		},
 
 		timeline: function() {
