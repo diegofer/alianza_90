@@ -1,6 +1,5 @@
 body {
   background: #808080;
-  position: relative;
 }
 header {
   margin-top: 15px;
@@ -9,31 +8,6 @@ header {
   left: 0;
   right: 0;
   z-index: 10;
-}
-.contenedor {
-  position: relative;
-  min-height: 400px;
-  z-index: 1;
-  height: 1080px;
-}
-.content-uno {
-  background: #f00;
-  text-align: center;
-}
-.content-uno #dibujo {
-  position: relative;
-  background: #ff0;
-  display: block;
-  top: 10%;
-  font-size: 40px;
-}
-.content-uno #texto-home {
-  background: #808080;
-  position: relative;
-  display: block;
-  top: 100px;
-  padding: 0 20% 0 20%;
-  text-align: justify;
 }
 #section-home {
   background: #008000;
@@ -66,4 +40,7 @@ header {
   left: 50%;
   margin-left: -150px;
   bottom: 0;
+}
+#section-timeline {
+  text-align: center;
 }

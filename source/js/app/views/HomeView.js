@@ -3,6 +3,7 @@ define(function (require) {
 	"use strict";
 
 	var $           = require('jquery'),
+		hoverIntent  = require('jquery.hoverIntent'),
 	    _           = require('underscore'),
 		Backbone    = require('backbone'),
 		tpl         = require('text!tpl/Home.html'),
@@ -23,22 +24,32 @@ define(function (require) {
 				self.browserHeight = $(window).height(); // Obtenemos la altura del browser
 				self.render();
 			});
+
 		},
 		
-  //       events: {
-  //           "click": "alClick",
-  //       },
 
 		render: function() {
 			this.$el.height(this.browserHeight)
-			this.$el.html( template() );		
+			this.$el.html( template() );	
+
+			var $element = this.$el.find('#info-home');
+			$element.hoverIntent(this.alHoverIntentIn, this.alHoverIntentOut);
+			
     		return this.el;
 		},
 
-		// alClick: function() {
-		// 	$('#list-sedes').find('.list-group-item').removeClass('active');
-		// 	this.$el.find('.list-group-item').addClass('active');
-		// }
+
+		alHoverIntentIn: function() {
+			var pos = $("#section-timeline").position().top;
+		    $("body, html").animate({ 
+		    	scrollTop: pos }, 1500);
+		},
+
+
+		alHoverIntentOut: function() {
+			//console.log('SOY HOVERINTENT OUT')
+		},   
+		
 
 
 	});

@@ -14,7 +14,9 @@ require.config({
 		},
 		'underscore': {
 			exports: '_'
-		}
+		},
+
+		'jquery.hoverIntent'  : ['jquery']
 	},
 
 	urlArgs: "bust=" + (new Date()).getTime(),
