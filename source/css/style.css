@@ -1,3 +1,7 @@
+body {
+  background: #808080;
+  position: relative;
+}
 header {
   margin-top: 15px;
   position: fixed;
@@ -10,7 +14,7 @@ header {
   position: relative;
   min-height: 400px;
   z-index: 1;
-  height: 800px;
+  height: 1080px;
 }
 .content-uno {
   background: #f00;
@@ -18,11 +22,48 @@ header {
 }
 .content-uno #dibujo {
   position: relative;
-  background: #00f;
+  background: #ff0;
   display: block;
   top: 10%;
-  font-size: 70px;
+  font-size: 40px;
 }
-.content-dos {
-  background: #00f;
+.content-uno #texto-home {
+  background: #808080;
+  position: relative;
+  display: block;
+  top: 100px;
+  padding: 0 20% 0 20%;
+  text-align: justify;
+}
+#section-home {
+  background: #008000;
+  position: relative;
+  min-height: 400px;
+}
+#section-home div {
+  text-align: center;
+}
+#section-home #img-home {
+  background: #f00;
+  position: relative;
+  display: block;
+  top: 15%;
+  text-align: center;
+}
+#section-home #img-home img {
+  margin: 0 auto;
+}
+#section-home #texto-home {
+  position: relative;
+  display: block;
+  top: 20%;
+  text-align: justify;
+  padding: 0 20% 0 20%;
+}
+#section-home #info-home {
+  position: absolute;
+  width: 300px;
+  left: 50%;
+  margin-left: -150px;
+  bottom: 0;
 }
