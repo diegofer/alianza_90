@@ -5,11 +5,10 @@ define(function(require){
 	var $                = require('jquery'),
 		_                = require('underscore'),
 		Backbone         = require('backbone'),
-		tpl              = require('text!tpl/TimeLine.html'),
 
-		YearView         = require('app/views/YearView'),
+		YearView         = require('app/views/YearView');
 
-		template         = _.template(tpl);
+	
  
 
 	return Backbone.View.extend({
@@ -28,9 +27,12 @@ define(function(require){
 			
 		},
 
+		events: {
+			'mousemove'  : 'animarTimeSlide'
+		},
+
 		render: function() {
 			this.$el.height(this.browserHeight)
-			this.$el.html( template() );
 			this.renderChildren();
 		},
 
@@ -43,6 +45,11 @@ define(function(require){
 				$ul.append( yearView.render() );
 				this.childViews.push(yearView);   // Almacenamos las childviews para luego poder eliminarlas
 			}, this);
+		},
+
+		animarTimeSlide: function(e) {
+			//console.log(e.offsetX);
+			console.log(e.pageX);
 		},
 
 		onClose: function() {

@@ -39,6 +39,30 @@ header {
   bottom: 0;
 }
 #section-timeline {
+  position: relative;
   text-align: center;
   background: #d6d6d6;
+  width: 90%;
+  overflow: hidden;
+}
+#section-timeline ul {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #008000;
+  height: 100%;
+  width: 4000px;
+  overflow: hidden;
+  text-align: left;
+}
+#section-timeline ul li {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 300px;
+  height: 100%;
+  overflow: hidden;
+  background: #f00;
+  border-right: solid 1px #fff;
 }
