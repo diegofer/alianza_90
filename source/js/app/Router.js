@@ -5,9 +5,13 @@ define(function (require) {
 	var $                = require('jquery'),
 		Backbone         = require('backbone'),
 
+		HeaderView        = require('app/views/HeaderView'),
 		HomeView          = require('app/views/HomeView'),
 		TimeLineView      = require('app/views/TimeLineView'),
-		HeaderView        = require('app/views/HeaderView');
+		YearDetalleView   = require('app/views/YearDetalleView'),
+
+		$mainContent      = $('#main-content');
+		
 
 
 	return Backbone.Router.extend({
@@ -16,6 +20,7 @@ define(function (require) {
 			console.log('iniciando router');
 			
 			this.years = data.years;
+			this.actualViews = [];
 
 			var headerView = new HeaderView({ el: $('header')});
 
@@ -24,25 +29,47 @@ define(function (require) {
 
 		routes: {
 			''           :'inicio',
-			'timeline'   : 'timeline'
+			':number'   : 'year'
 		},
 
 
 		inicio: function() {
+			this.closeActualViews();
+
 			var homeView = new HomeView({
-				el: $('#section-home')
+				contenedorId: '#main-content'
 			});
+
+			this.actualViews.push(homeView);
+
 
 			var timeLineView = new TimeLineView({
-				el: $('#section-timeline'),
-				collection: this.years
+				collection: this.years,
+				contenedorId: '#main-content'
 			});
-			
-			
+			this.actualViews.push(timeLineView);
 		},
 
-		timeline: function() {
+		year: function(year) {
+			var yearModel = this.years.findWhere({year:parseInt(year)});
 
+			if(!yearModel) {
+				alert("NO EXISTE ESTA PAGINA");
+				return
+			}	
+
+			this.closeActualViews();
+
+			var yearDetalleView = new YearDetalleView({model:yearModel});
+			$mainContent.html( yearDetalleView.render() );
+			this.actualViews.push(yearDetalleView);
+		},
+
+
+		closeActualViews: function() {
+			_(this.actualViews).each(function(view) {
+        		view.close();
+      		});
 		},
 
 		updateSize: function() {

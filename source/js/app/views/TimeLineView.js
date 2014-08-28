@@ -6,19 +6,23 @@ define(function(require){
 		_                = require('underscore'),
 		Backbone         = require('backbone'),
 
-		YearView         = require('app/views/YearView');
+		YearItemView         = require('app/views/YearItemView');
 
 	
  
 
 	return Backbone.View.extend({
 
-		initialize: function() {
+		tagName   : 'section',
+		id        : 'section-timeline',
+		className : "clearfix browser-height",
+
+		initialize: function(options) {
 			console.log('inicializando TimeLineView');
+			this.contenedorId = options.contenedorId;
 			this.childViews = [];
 			var self = this;
 
-			console.log(this.collection.models);
 			$(document).ready(function(){
 				self.browserHeight = $(window).height(); // Obtenemos la altura del browser
 				self.render();
@@ -33,18 +37,20 @@ define(function(require){
 
 		render: function() {
 			this.$el.height(this.browserHeight)
+			$(this.contenedorId).append(this.el);
 			this.renderChildren();
 		},
 
 		renderChildren: function() {
-			var $ul = this.$el.find('ul');
+			var $ul = $('<ul></ul>');
 			console.log($ul);
 			_.each(this.collection.models, function(year){
-				var yearView = new YearView({model: year});
+				var yearItemView = new YearItemView({model: year});
 
-				$ul.append( yearView.render() );
-				this.childViews.push(yearView);   // Almacenamos las childviews para luego poder eliminarlas
+				$ul.append( yearItemView.render() );
+				this.childViews.push(yearItemView);   // Almacenamos las childviews para luego poder eliminarlas
 			}, this);
+			this.$el.html($ul);
 		},
 
 		animarTimeSlide: function(e) {

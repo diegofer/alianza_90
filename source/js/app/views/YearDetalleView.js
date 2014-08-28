@@ -5,7 +5,7 @@ define(function (require) {
 	var $           = require('jquery'),
 	    _           = require('underscore'),
 		Backbone    = require('backbone'),
-		tpl         = require('text!tpl/Year.html'),
+		tpl         = require('text!tpl/YearDetalle.html'),
 
 		template    = _.template(tpl);
 
@@ -14,7 +14,6 @@ define(function (require) {
 
 	return  Backbone.View.extend({
 
-		tagName: 'li',
 
 		initialize: function() {		
 			console.log('inicializando YearView');
@@ -22,8 +21,8 @@ define(function (require) {
 		
 
 		render: function() {
-			console.log(this.model.toJSON());
-			this.$el.html( template( this.model.toJSON() ) );		
+			//console.log(this.model.toJSON());
+			this.$el.html( template(this.model.toJSON() ) );		
     		return this.el;
 		},
 

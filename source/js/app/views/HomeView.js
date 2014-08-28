@@ -15,8 +15,15 @@ define(function (require) {
 
 	return  Backbone.View.extend({
 
-		initialize: function() {		
+		tagName   : 'section',
+		id        : 'section-home',
+		className : "clearfix browser-height",
+
+
+		initialize: function(options) {		
 			console.log('inicializando Homeiew');
+
+			this.contenedorId = options.contenedorId;
 
 			var self = this;
 
@@ -31,11 +38,10 @@ define(function (require) {
 		render: function() {
 			this.$el.height(this.browserHeight)
 			this.$el.html( template() );	
+			$(this.contenedorId).append(this.el);
 
 			var $element = this.$el.find('#info-home');
 			$element.hoverIntent(this.alHoverIntentIn, this.alHoverIntentOut);
-			
-    		return this.el;
 		},
 
 
