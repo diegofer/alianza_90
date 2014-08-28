@@ -32,7 +32,9 @@ define(function(require){
 		},
 
 		events: {
-			'mousemove'  : 'animarTimeSlide'
+			'mousemove'  : 'animarTimeSlide',
+			'mouseenter li'  : 'onMouseEnter',
+			'mouseleave li'  : 'onMouseLeave',
 		},
 
 		render: function() {
@@ -42,7 +44,7 @@ define(function(require){
 		},
 
 		renderChildren: function() {
-			var $ul = $('<ul></ul>');
+			var $ul = $('<ul>');
 			console.log($ul);
 			_.each(this.collection.models, function(year){
 				var yearItemView = new YearItemView({model: year});
@@ -56,7 +58,23 @@ define(function(require){
 		animarTimeSlide: function(e) {
 			//console.log(e.offsetX);
 			console.log(e.pageX);
+
 		},
+
+
+		onMouseEnter: function(event) {
+			$(event.currentTarget).animate({
+				width: "350px"
+			}, 400);
+		},
+
+
+		onMouseLeave: function(event) {
+			$(event.currentTarget).animate({
+				width: "300px"
+			}, 400);
+		},
+
 
 		onClose: function() {
 	        _(this.childViews).each(function(view) {

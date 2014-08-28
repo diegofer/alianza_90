@@ -27,4 +27,4 @@ def build_local():
 	local('node tools/r.js -o tools/build.js')
 
 def stylus_build():
-	local('stylus -w -o %s %s' %(CSS_PATH, STYLUS_FILE))
+	local('stylus -u nib -w -o %s %s' %(CSS_PATH, STYLUS_FILE))
