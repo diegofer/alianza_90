@@ -121,20 +121,37 @@ define(function(require){
 		onMouseEnter: function(event) {
 
 			//if (this.onEfect.slide) return;
-			console.log('ESTOY EN ENTER');
+			console.log('ESTOY EN ENTER');			
 			var width = this.$ul.outerWidth(true);
 
 			this.onEfect.slide = true;
 			var self = this;
 
-			this.$ul.width(width+50);   // hacemos espacio para el aumento del slide
+			this.$ul.width(width+100);   // hacemos espacio para el aumento del slide
+			var liActual=$(event.currentTarget);
 
 			$(event.currentTarget).animate({
-				width: "+=50px"
+				width: "+=100px"
 			}, 400, function(){
-				//self.$ul.finish();  // Finalizamos la animacion en el timeline
+				//PRUEBA DE REACOMODACION DE SLIDES	
+
+				var slides       = self.$ul.children(); 				
+				slides.each(function(i){					
+				var actual=	$(this);
+				var leftActual=parseInt(actual.css('left'));
+				var leftLiActual=parseInt(liActual.css('left'));
+				console.log(width+" > "+liActual.css('left'));
+				//console.log(+" > "+liActual.css('left'));
+						if(leftActual > leftLiActual){ // solo tomo los elementos mayores que el actual para cambiar el left
+							actual.css('left',"+=50px");//incremento en 50 la pos de los otros li							
+						}else {
+							actual.css('left',"-=50px");//incremento en 50 la pos de los otros li	
+						}
+				});		
 				self.onEfect.slide = false;
 			});
+		
+
 		},
 
 
@@ -144,15 +161,30 @@ define(function(require){
 			console.log('ESTOY EN LEAVE');
 			this.onEfect.slide = true;
 			var self = this;
-
+			var liActual=$(event.currentTarget);
 			$(event.currentTarget).animate({
 				width: self.slideWidth
 			}, 400, function(){
 				var width = self.$ul.outerWidth(true);
-				console.log(width);
-				self.$ul.width(width-50)
+				//console.log(width);
+				self.$ul.width(width-100);				
+				var slides = self.$ul.children(); 				
+				slides.each(function(i){					
+				var actual=	$(this);
+				var leftActual=parseInt(actual.css('left'));
+				var leftLiActual=parseInt(liActual.css('left'));				
+						if(leftActual > leftLiActual){ // solo tomo los elementos mayores que el actual para cambiar el left
+							actual.css('left',"-=50px");//incremento en 50 la pos de los otros li							
+						}	
+						else {
+							actual.css('left',"+=50px");//incremento en 50 la pos de los otros li	
+						}	
+				});	
 				self.onEfect.slide = false;
 			});
+
+
+
 		},
 
 
