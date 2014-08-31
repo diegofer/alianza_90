@@ -12,7 +12,7 @@ except ImportError:
     pass 
 
 RUTA_PROYECTO = os.path.join(os.path.dirname(os.path.abspath(__file__)))
-env.hosts = [private.HOST1]
+#env.hosts = [private.HOST1]
 
 ####################################################
 ##              SERVIDOR DE DESARROLLO            ##
