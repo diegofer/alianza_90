@@ -76,6 +76,7 @@ define(function(require){
 			console.log(realWidth);
 			slides.each(function(i){
 				console.log(i* realWidth);
+				$(this).css('left', realWidth * i);
 			});
 			
 			this.timeLineWidth = realWidth * numSlides;
