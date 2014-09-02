@@ -16,8 +16,9 @@ require.config({
 			exports: '_'
 		},
 
-		'jquery.hoverIntent'  : ['jquery'],
-		'src/carouFredSel/jquery.carouFredSel-min'  : ['jquery']
+		'jquery.hoverIntent'                        : ['jquery'],
+		'src/carouFredSel/jquery.carouFredSel-min'  : ['jquery'],
+		'src/Nivo-Lightbox/nivo-lightbox.min'       : ['jquery']
 	},
 
 	urlArgs: "bust=" + (new Date()).getTime(),

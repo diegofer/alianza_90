@@ -7,6 +7,7 @@ define(function (require) {
 		Backbone      = require('backbone'),
 		
 	    carouFredSel  = require('src/carouFredSel/jquery.carouFredSel-min'),
+	    NivoLightbox  = require('src/Nivo-Lightbox/nivo-lightbox.min'),
 	    tpl           = require('text!tpl/YearDetalle.html'),
 
 		template    = _.template(tpl);
@@ -65,6 +66,8 @@ define(function (require) {
 					}
 				}
     		});
+
+    		this.$el.find('#year-slide .destacar').nivoLightbox();
 		}
 
 

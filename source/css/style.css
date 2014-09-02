@@ -91,7 +91,7 @@ header {
   filter: alpha(opacity=30);
 }
 #year {
-  background: #f00;
+  background: #fff;
 }
 #year section h1,
 #year section h2,
@@ -103,16 +103,19 @@ header {
   padding: 0 10px 0 10px;
 }
 #year section .left {
-  background: #ffa500;
+  background: #fff;
 }
 #year section .right {
-  background: #808080;
+  background: #fff;
 }
-#year section .content img {
+#year section .content-img img {
   margin: 0 auto;
 }
 #year #year-top {
   background: #00f;
+}
+#year #year-bottom {
+  background: #fff;
 }
 #year #year-slide {
   display: block;
@@ -164,12 +167,12 @@ header {
   position: absolute;
   background: #00f;
   z-index: 9;
-  width: 60px;
-  height: 80px;
+  width: 50px;
+  height: 60px;
   top: 50%;
   left: 50%;
-  margin-left: -30px;
-  margin-top: -40px;
+  margin-left: -25px;
+  margin-top: -30px;
   background: #000;
   opacity: 0.1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
@@ -183,11 +186,11 @@ header {
 #year #year-slide #controles a {
   display: block;
   float: left;
-  width: 30px;
-  height: 80px;
-  line-height: 80px;
+  width: 25px;
+  height: 60px;
+  line-height: 60px;
   text-align: center;
-  font-size: 40px;
+  font-size: 30px;
   text-decoration: none;
   cursor: pointer;
   color: #999;
@@ -200,9 +203,6 @@ header {
 #year #year-slide #controles a:hover {
   color: #fff;
 }
-#year #year-bottom {
-  background: #ff0;
-}
 @media only screen and (min-width: 768px) {
   #year {
     position: relative;
@@ -211,18 +211,30 @@ header {
   #year #year-bottom {
     position: relative;
   }
-  #year #year-top .content,
-  #year #year-bottom .content {
+  #year #year-top .content-img,
+  #year #year-bottom .content-img {
     position: relative;
     height: 100%;
     width: 50%;
     float: left;
     vertical-aling: top;
   }
-  #year #year-top .content img,
-  #year #year-bottom .content img {
-    width: auto;
+  #year #year-top .content-img img,
+  #year #year-bottom .content-img img {
+    width: 100%;
     height: 100%;
     margin: 0;
+  }
+  #year #year-slide #controles {
+    width: 60px;
+    height: 80px;
+    margin-left: -30px;
+    margin-top: -40px;
+  }
+  #year #year-slide #controles a {
+    width: 30px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 40px;
   }
 }
