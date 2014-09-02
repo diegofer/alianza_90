@@ -50,6 +50,7 @@ define(function (require) {
 			this.actualViews.push(timeLineView);
 		},
 
+
 		year: function(year) {
 			var yearModel = this.years.findWhere({year:parseInt(year)});
 
@@ -60,8 +61,11 @@ define(function (require) {
 
 			this.closeActualViews();
 
-			var yearDetalleView = new YearDetalleView({model:yearModel});
-			$mainContent.html( yearDetalleView.render() );
+			var yearDetalleView = new YearDetalleView({
+				model        :yearModel,
+				contenedorId :'#main-content'
+			});
+
 			this.actualViews.push(yearDetalleView);
 		},
 
@@ -72,9 +76,15 @@ define(function (require) {
       		});
 		},
 
+
 		updateSize: function() {
 		    var height = $(window).height();
-		    $('.browser-height').height(height);
+		    var width  =  $(window).width();
+		    console.log(width);
+		    if (width >= 768) {
+		    	 $('.browser-height').height(height);
+		    };
+		   
 		},
 
 

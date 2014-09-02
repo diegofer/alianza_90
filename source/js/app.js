@@ -16,7 +16,8 @@ require.config({
 			exports: '_'
 		},
 
-		'jquery.hoverIntent'  : ['jquery']
+		'jquery.hoverIntent'  : ['jquery'],
+		'src/carouFredSel/jquery.carouFredSel-min'  : ['jquery']
 	},
 
 	urlArgs: "bust=" + (new Date()).getTime(),

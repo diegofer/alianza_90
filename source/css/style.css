@@ -1,6 +1,9 @@
 body {
   background: #808080;
 }
+body #main-content {
+  position: relative;
+}
 header {
   margin-top: 15px;
   position: fixed;
@@ -86,4 +89,140 @@ header {
   opacity: 0.3;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter: alpha(opacity=30);
+}
+#year {
+  background: #f00;
+}
+#year section h1,
+#year section h2,
+#year section h3 {
+  text-align: center;
+}
+#year section p {
+  text-align: justify;
+  padding: 0 10px 0 10px;
+}
+#year section .left {
+  background: #ffa500;
+}
+#year section .right {
+  background: #808080;
+}
+#year section .content img {
+  margin: 0 auto;
+}
+#year #year-top {
+  background: #00f;
+}
+#year #year-slide {
+  display: block;
+  background: #008000;
+  position: relative;
+}
+#year #year-slide ul#carousel {
+  background: #f00;
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#year #year-slide ul#carousel li {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  float: left;
+  list-style: none;
+}
+#year #year-slide ul#carousel li img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+#year #year-slide ul#carousel li span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 1px;
+  display: block;
+  background: #000;
+  opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
+  color: #fff;
+  padding: 2px 5px;
+}
+#year #year-slide:hover #controles {
+  opacity: 0.6;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  filter: alpha(opacity=60);
+}
+#year #year-slide #controles {
+  position: absolute;
+  background: #00f;
+  z-index: 9;
+  width: 60px;
+  height: 80px;
+  top: 50%;
+  left: 50%;
+  margin-left: -30px;
+  margin-top: -40px;
+  background: #000;
+  opacity: 0.1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+  filter: alpha(opacity=10);
+  -webkit-transition: opacity 400ms linear;
+  -moz-transition: opacity 400ms linear;
+  -o-transition: opacity 400ms linear;
+  -ms-transition: opacity 400ms linear;
+  transition: opacity 400ms linear;
+}
+#year #year-slide #controles a {
+  display: block;
+  float: left;
+  width: 30px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 40px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #999;
+  -webkit-transition: color 200ms linear;
+  -moz-transition: color 200ms linear;
+  -o-transition: color 200ms linear;
+  -ms-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+#year #year-slide #controles a:hover {
+  color: #fff;
+}
+#year #year-bottom {
+  background: #ff0;
+}
+@media only screen and (min-width: 768px) {
+  #year {
+    position: relative;
+  }
+  #year #year-top,
+  #year #year-bottom {
+    position: relative;
+  }
+  #year #year-top .content,
+  #year #year-bottom .content {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    float: left;
+    vertical-aling: top;
+  }
+  #year #year-top .content img,
+  #year #year-bottom .content img {
+    width: auto;
+    height: 100%;
+    margin: 0;
+  }
 }
