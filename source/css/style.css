@@ -211,8 +211,8 @@ header {
   #year #year-bottom {
     position: relative;
   }
-  #year #year-top .content-img,
-  #year #year-bottom .content-img {
+  #year #year-top .contenedor,
+  #year #year-bottom .contenedor {
     position: relative;
     height: 100%;
     width: 50%;

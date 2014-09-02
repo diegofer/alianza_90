@@ -5,12 +5,18 @@ define(function (require) {
 	var $             = require('jquery'),
 	    _             = require('underscore'),
 		Backbone      = require('backbone'),
-		
+			
 	    carouFredSel  = require('src/carouFredSel/jquery.carouFredSel-min'),
 	    NivoLightbox  = require('src/Nivo-Lightbox/nivo-lightbox.min'),
+	    swig          = require('swig'),    
 	    tpl           = require('text!tpl/YearDetalle.html'),
 
-		template    = _.template(tpl);
+	    template      =  swig.compile(tpl);
+
+		//template    = _.template(tpl);
+		
+
+		
 
 
 
@@ -24,6 +30,7 @@ define(function (require) {
 		initialize: function(options) {		
 			console.log('inicializando YearDetalleView');
 			this.contenedorId = options.contenedorId;
+			
 
 			var self = this;
 

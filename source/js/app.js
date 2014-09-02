@@ -4,7 +4,7 @@ require.config({
 	paths: {
 		app: '../app',
 		tpl: '../tpl',
-		src: '../../src'
+		src: '../../src',
 	},
 
 	shim: {
