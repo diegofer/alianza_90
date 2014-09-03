@@ -73,9 +73,9 @@ define(function(require){
 		
 			this.$el.html(this.$ul);
 			var realWidth = this.$ul.children().eq(0).outerWidth(true);
-			console.log(realWidth);
+			//console.log(realWidth);
 			slides.each(function(i){
-				console.log(i* realWidth);
+				//console.log(i* realWidth);
 				$(this).css('left', realWidth * i);
 			});
 			
@@ -83,8 +83,8 @@ define(function(require){
 			this.rightMax = this.timeLineWidth - contentWidth;
 			this.$ul.width(''+this.timeLineWidth +'');
 			
-			console.log(realWidth);
-			console.log(this.timeLineWidth);
+			//console.log(realWidth);
+			//console.log(this.timeLineWidth);
 			
 			
 			

@@ -15,18 +15,49 @@ define(function (require) {
 		},
 		
         events: {
-            'click #home-btn'      : 'doScroll',
-            'click #timeline-btn'  : 'doScroll',
-            'click #video-btn'     : 'doScroll',
+            'click #home-btn'      : 'irHome',
+            'click #timeline-btn'  : 'irTimeline',
+            'click #video-btn'     : 'irVideo',
+        },
+
+
+        irHome: function(event) {
+        	if (Backbone.history.fragment != "") {  // si estoy en una url distinta al home 
+        		router.navigate('/', true);
+        	} else {
+        		this.doScroll(event.currentTarget.id);  // si estoy en home solo hago scroll hasta el top de home
+        	}      	
+        },
+
+        irTimeline: function(event) {
+
+        	if (Backbone.history.fragment != "")  // si estoy en una url distinta al home 
+        	{  
+        		router.navigate('/', true);
+        		
+        		var self = this;
+
+        		setTimeout(function(){
+        			self.doScroll(event.currentTarget.id);
+        		}, 1000);
+        		
+        	} 
+        	else 
+        	{
+        		this.doScroll(event.currentTarget.id);  // si estoy en home solo hago scroll hasta el top del timeline
+        	}      	
+        },
+        
+
+        irVideo: function() {
+
         },
 
 
 
-		doScroll: function(event) {
+		doScroll: function(elemId) {
 			this.undelegateEvents();  // aseguramos que el evento corra una sola vez
 			
-
-			var elemId = event.currentTarget.id;
 			var pos;
 
 			if (elemId === 'home-btn') pos = 0;

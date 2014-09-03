@@ -12,6 +12,9 @@ header {
   right: 0;
   z-index: 10;
 }
+header #home-btn {
+  cursor: pointer;
+}
 #section-home {
   background: #777;
   position: relative;

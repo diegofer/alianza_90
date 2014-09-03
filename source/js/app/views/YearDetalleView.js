@@ -67,6 +67,8 @@ define(function (require) {
 
 				scroll: 1,
 				items: {
+					heght: 'auto',
+					width: width,
 					visible: {
 						min: 2,
 						max: 2
