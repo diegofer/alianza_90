@@ -20,6 +20,11 @@ define(function(require){
 		
 		initialize: function(options) {
 			console.log('inicializando TimeLineView');
+
+			var numero = (1000 * 20 ) / 100;
+			console.log('CALCULO: '+numero);
+
+
 			
 			this.contenedorId = options.contenedorId;
 			this.childViews = [];
@@ -82,38 +87,49 @@ define(function(require){
 			this.timeLineWidth = realWidth * numSlides;
 			this.rightMax = this.timeLineWidth - contentWidth;
 			this.$ul.width(''+this.timeLineWidth +'');
-			
-			//console.log(realWidth);
-			//console.log(this.timeLineWidth);
-			
-			
-			
-			
-			
-
-			// var timeLineWidth = (numSlides * 300) + numSlides ;
-
-			// this.$ul.width(''+timeLineWidth +'');
-			// this.$el.html(this.$ul);
 		},
+
 
 		animarTimeSlide: function(e) {
 
-			
 			if (this.onEfect.timeline) return;
-			//console.log(e.offsetX);
-			console.log(e.pageX);
+			
+			var ancho = this.$el.outerWidth(),
+			    numBajo = (ancho  * 25 ) / 100,
+			    numAlto = ancho - numBajo,
+			    mousePos  = e.pageX;
 
-			this.onEfect.timeline = true;
-			var self = this;
-			// this.$ul.animate(
-			// 	{right: self.rightMax}, 
-			// 	1000, 
-			// 	function(){
-			// 		self.onEfect.timeline = false;
-			// 	}
+			console.log("mousepos: "+mousePos+" numAlto: "+numAlto);
 
-			// );
+			if (mousePos <= numBajo) {
+
+				this.onEfect.timeline = true;
+				var self = this;
+
+				this.$ul.animate(
+					{right: 0}, 
+					1000, 
+					function(){
+						self.onEfect.timeline = false;
+					}
+
+				);
+			}
+
+			if (mousePos >= numAlto) {
+			
+				this.onEfect.timeline = true;
+				var self = this;
+
+				this.$ul.animate(
+					{right: self.rightMax}, 
+					1000, 
+					function(){
+						self.onEfect.timeline = false;
+					}
+
+				);
+			};
 
 		},
 
@@ -121,35 +137,35 @@ define(function(require){
 		onMouseEnter: function(event) {
 
 			//if (this.onEfect.slide) return;
-			console.log('ESTOY EN ENTER');			
-			var width = this.$ul.outerWidth(true);
+			// console.log('ESTOY EN ENTER');			
+			// var width = this.$ul.outerWidth(true);
 
-			this.onEfect.slide = true;
-			var self = this;
+			// this.onEfect.slide = true;
+			// var self = this;
 
-			this.$ul.width(width+100);   // hacemos espacio para el aumento del slide
-			var liActual=$(event.currentTarget);
+			// this.$ul.width(width+100);   // hacemos espacio para el aumento del slide
+			// var liActual=$(event.currentTarget);
 
-			$(event.currentTarget).animate({
-				width: "+=100px"
-			}, 400, function(){
-				//PRUEBA DE REACOMODACION DE SLIDES	
+			// $(event.currentTarget).animate({
+			// 	width: "+=100px"
+			// }, 400, function(){
+			// 	//PRUEBA DE REACOMODACION DE SLIDES	
 
-				var slides       = self.$ul.children(); 				
-				slides.each(function(i){					
-				var actual=	$(this);
-				var leftActual=parseInt(actual.css('left'));
-				var leftLiActual=parseInt(liActual.css('left'));
-				console.log(width+" > "+liActual.css('left'));
-				//console.log(+" > "+liActual.css('left'));
-						if(leftActual > leftLiActual){ // solo tomo los elementos mayores que el actual para cambiar el left
-							actual.css('left',"+=50px");//incremento en 50 la pos de los otros li							
-						}else {
-							actual.css('left',"-=50px");//incremento en 50 la pos de los otros li	
-						}
-				});		
-				self.onEfect.slide = false;
-			});
+			// 	// var slides       = self.$ul.children(); 				
+			// 	// slides.each(function(i){					
+			// 	// var actual=	$(this);
+			// 	// var leftActual=parseInt(actual.css('left'));
+			// 	// var leftLiActual=parseInt(liActual.css('left'));
+			// 	// console.log(width+" > "+liActual.css('left'));
+			// 	// //console.log(+" > "+liActual.css('left'));
+			// 	// 		if(leftActual > leftLiActual){ // solo tomo los elementos mayores que el actual para cambiar el left
+			// 	// 			actual.css('left',"+=50px");//incremento en 50 la pos de los otros li							
+			// 	// 		}else {
+			// 	// 			actual.css('left',"-=50px");//incremento en 50 la pos de los otros li	
+			// 	// 		}
+			// 	// });		
+			// 	self.onEfect.slide = false;
+			// });
 		
 
 		},
@@ -158,30 +174,30 @@ define(function(require){
 		onMouseLeave: function(event) {	
 
 			//if (this.onEfect.slide) return;
-			console.log('ESTOY EN LEAVE');
-			this.onEfect.slide = true;
-			var self = this;
-			var liActual=$(event.currentTarget);
-			$(event.currentTarget).animate({
-				width: self.slideWidth
-			}, 400, function(){
-				var width = self.$ul.outerWidth(true);
-				//console.log(width);
-				self.$ul.width(width-100);				
-				var slides = self.$ul.children(); 				
-				slides.each(function(i){					
-				var actual=	$(this);
-				var leftActual=parseInt(actual.css('left'));
-				var leftLiActual=parseInt(liActual.css('left'));				
-						if(leftActual > leftLiActual){ // solo tomo los elementos mayores que el actual para cambiar el left
-							actual.css('left',"-=50px");//incremento en 50 la pos de los otros li							
-						}	
-						else {
-							actual.css('left',"+=50px");//incremento en 50 la pos de los otros li	
-						}	
-				});	
-				self.onEfect.slide = false;
-			});
+			// console.log('ESTOY EN LEAVE');
+			// this.onEfect.slide = true;
+			// var self = this;
+			// var liActual=$(event.currentTarget);
+			// $(event.currentTarget).animate({
+			// 	width: self.slideWidth
+			// }, 400, function(){
+			// 	var width = self.$ul.outerWidth(true);
+			// 	//console.log(width);
+			// 	self.$ul.width(width-100);				
+			// 	var slides = self.$ul.children(); 				
+			// 	slides.each(function(i){					
+			// 	var actual=	$(this);
+			// 	var leftActual=parseInt(actual.css('left'));
+			// 	var leftLiActual=parseInt(liActual.css('left'));				
+			// 			if(leftActual > leftLiActual){ // solo tomo los elementos mayores que el actual para cambiar el left
+			// 				actual.css('left',"-=50px");//incremento en 50 la pos de los otros li							
+			// 			}	
+			// 			else {
+			// 				actual.css('left',"+=50px");//incremento en 50 la pos de los otros li	
+			// 			}	
+			// 	});	
+			// 	self.onEfect.slide = false;
+			// });
 
 
 

@@ -39,7 +39,7 @@ define(function (require) {
 
         		setTimeout(function(){
         			self.doScroll(event.currentTarget.id);
-        		}, 1000);
+        		}, 700);
         		
         	} 
         	else 
@@ -47,7 +47,7 @@ define(function (require) {
         		this.doScroll(event.currentTarget.id);  // si estoy en home solo hago scroll hasta el top del timeline
         	}      	
         },
-        
+
 
         irVideo: function() {
 

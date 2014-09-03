@@ -217,6 +217,10 @@ header #home-btn {
     height: 100%;
     margin: 0;
   }
+  #year #year-top .content-text,
+  #year #year-bottom .content-text {
+    z-index: 8;
+  }
   #year #year-top .content-text h1,
   #year #year-bottom .content-text h1 {
     margin: 0;
@@ -235,6 +239,7 @@ header #home-btn {
     text-align: left;
     padding: 0;
     position: absolute;
+    z-index: 9;
     left: 10%;
     right: 10%;
     top: 15%;
@@ -242,6 +247,7 @@ header #home-btn {
   }
   #year #year-top .content-text > div .hacer-scroll,
   #year #year-bottom .content-text > div .hacer-scroll {
+    z-index: 10;
     position: absolute;
     top: 40%;
     bottom: 0;

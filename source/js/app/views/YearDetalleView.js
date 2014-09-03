@@ -39,23 +39,25 @@ define(function (require) {
 		
 
 		render: function() {
-			//console.log(this.model.toJSON());
 			this.$el.html( template(this.model.toJSON() ) );
 
 			if (this.browserWidth >= 768 ) this.$el.find('.browser-height').height(this.browserHeight);
 					
     		$(this.contenedorId).html(this.el);
 
-    		// setear scroll en parrafos
+    		// setear scroll en texto
+    		//$.mCustomScrollbar.defaults.scrollButtons.enable=true;
     		$(".hacer-scroll").mCustomScrollbar({
-				//theme:"minimal-dark"
+				theme:"dark-2",
+				scrollButtons:{
+					enable:false
+				}
 			});
 
     		var self = this;
     		setTimeout(function(){
         		self.setCarrousel();
     		}, 100);
-    		//this.setCarrousel();
 		},
 
 
@@ -83,7 +85,7 @@ define(function (require) {
 				}
     		});
 
-    		this.$el.find('#year-slide .destacar').nivoLightbox({
+    		this.$el.find('.destacar').nivoLightbox({
     			effect: 'fadeScale', 
     		});
 		}
