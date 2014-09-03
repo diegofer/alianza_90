@@ -2,21 +2,17 @@ define(function (require) {
 
 	"use strict";
 
-	var $             = require('jquery'),
-	    _             = require('underscore'),
-		Backbone      = require('backbone'),
+	var $               = require('jquery'),
+	    _               = require('underscore'),
+		Backbone        = require('backbone'),
 			
-	    carouFredSel  = require('src/carouFredSel/jquery.carouFredSel-min'),
-	    NivoLightbox  = require('src/Nivo-Lightbox/nivo-lightbox.min'),
-	    swig          = require('swig'),    
-	    tpl           = require('text!tpl/YearDetalle.html'),
+	    customScrollbar = require('src/customScrollbar/jquery.mCustomScrollbar.concat.min'),
+	    carouFredSel    = require('src/carouFredSel/jquery.carouFredSel-min'),
+	    NivoLightbox    = require('src/Nivo-Lightbox/nivo-lightbox.min'),
+	    swig            = require('swig'),    
+	    tpl             = require('text!tpl/YearDetalle.html'),
 
-	    template      =  swig.compile(tpl);
-
-		//template    = _.template(tpl);
-		
-
-		
+	    template        =  swig.compile(tpl);
 
 
 
@@ -49,26 +45,37 @@ define(function (require) {
 			if (this.browserWidth >= 768 ) this.$el.find('.browser-height').height(this.browserHeight);
 					
     		$(this.contenedorId).html(this.el);
-    		this.setCarrousel();
+
+    		// setear scroll en parrafos
+    		$(".hacer-scroll").mCustomScrollbar({
+				//theme:"minimal-dark"
+			});
+
+    		var self = this;
+    		setTimeout(function(){
+        		self.setCarrousel();
+    		}, 100);
+    		//this.setCarrousel();
 		},
 
 
 		setCarrousel: function() {
 			var $elem = this.$el.find('#year-slide'),  // Obtenemos el contenedor
-				width = $elem.width() / 2,                 // obtenemos su width dividido por 2
-				$li   = $elem.find('li').width(width);     // le pasamos el width a cada slide
+				widthSlide = $elem.width() / 2,                 // obtenemos su width dividido por 2
+				$li   = $elem.find('li').width(widthSlide);     // le pasamos el width a cada slide
 
 			this.$el.find('#carousel').carouFredSel({
 				responsive: true,
 				width: '100%',
+				height: 'auto',
     			prev: '#prev2',
 				next: '#next2',
 				auto: false,
 
 				scroll: 1,
 				items: {
-					heght: 'auto',
-					width: width,
+					width: widthSlide,
+					height: 'auto',
 					visible: {
 						min: 2,
 						max: 2
@@ -76,7 +83,9 @@ define(function (require) {
 				}
     		});
 
-    		this.$el.find('#year-slide .destacar').nivoLightbox();
+    		this.$el.find('#year-slide .destacar').nivoLightbox({
+    			effect: 'fadeScale', 
+    		});
 		}
 
 
