@@ -28,3 +28,53 @@ def build_local():
 
 def stylus_build():
 	local('stylus -u nib -w -o %s %s' %(CSS_PATH, STYLUS_FILE))
+
+
+
+
+####################################################
+##              SERVIDOR DE PRODUCCION            ##
+####################################################
+env.hosts = ['alianza@web348.webfaction.com']
+
+ROOT_PATH   = '/home/alianza/produccion/alianza_90'
+NODE_EXEC  = '/home/alianza/webapps/alliance_node/bin/node'
+
+
+def deploy():
+	print(green('agregando archivos al repositorio local'))
+	local('git add .')
+
+	with settings(warn_only=True):
+		msg = prompt("mensaje del commit: ")
+		result = local('git commit -a -m %s' % msg, capture=True)
+	if result.failed:
+		abort(red("Abortando. No hay nada para hacer commit"))
+
+	print(green('Actualizando repositorio central...'))
+	local('git push -u origin master')
+	
+	print(green('Actualizando repositorio de produccion...'))
+	with cd(ROOT_PATH):
+		run('git pull')
+
+	print(green('Compilando archivos para deploy'))
+	build()
+
+
+
+def build():
+	print(green('Compilando alianza_90'))
+	with cd(ROOT_PATH):
+		run('%s tools/r.js -o tools/build.js' % NODE_EXEC)
+
+
+
+
+def git_status():
+	with cd(ROOT_PATH):
+		run('git log')
+
+
+
+
