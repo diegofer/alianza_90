@@ -15,6 +15,20 @@ header {
 header #home-btn {
   cursor: pointer;
 }
+.spiner {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  margin-left: -25px;
+  top: 50%;
+  margin-top: -25px;
+  z-index: 999;
+}
+.spiner i {
+  line-height: 50px;
+  font-size: 50px;
+}
 #section-home {
   background: #777;
   position: relative;

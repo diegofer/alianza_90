@@ -35,6 +35,14 @@ require([
 
 	function ($, Backbone, YearsCollection, Router) {
 
+		$(document).ajaxStart(function(){
+	        console.log('empezo ajax');
+	        $('.spiner').show();
+	    }).ajaxStop(function(){
+	        console.log('termino ajax');
+	        $('.spiner').hide();
+	    });
+
 
 		// Metodo para liberar memoria y remover vistas
 		Backbone.View.prototype.close = function() {
