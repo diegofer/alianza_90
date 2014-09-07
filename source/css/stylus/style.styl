@@ -1,7 +1,10 @@
 @import 'nib'
+@import 'utils'
+
 
 body
     background gray
+    font-family: 'Merriweather', serif;
 
     #main-content
         position relative
@@ -9,56 +12,135 @@ body
 ////////////  HEADER  ////////////
 
 header
-    margin-top 15px
-    position fixed
+    position absolute
+    text-align center
+    padding 15px 15px
     top 0
     left 0
     right 0
     z-index 10
-    #home-btn
-        cursor pointer
+    #logo
+        background url(../img/logo-gold.png)
+        width 60px
+        height 41px
+        float left  
+        cursor pointer  
+    .btn-group
+        float right
+        margin-bottom 10px
+    .btn
+        background transparent    
+        font-size 8px
+        padding 4px 10px
+        font-style italic
+        border solid 1px #D1B03C
+        color #D1B03C
+    .btn-white
+        border solid 1px #fff
+        color #fff
+    
+    .menu-timeline
+        display none
+        position relative
+        font-size 12px
+        font-family sans-serif
+        .box
+            position relative
+            width 50px
+            height 30px
+            float left
+            border-bottom solid 1px #222
+            .numero
+                display block
+                height 20px
+                line-height 25px
+                cursor pointer
+                &:hover
+                    color #999
+                &:hover ~ .punto
+                    background #999
 
-.spiner
-    position absolute
-    width 50px
-    height 50px
-    left 50%
-    margin-left -25px
-    top 50%
-    margin-top -25px
-    z-index 999
-    i
-        line-height 50px
-        font-size 50px
+            .punto
+                position absolute
+                background #222
+                width 4px
+                height 4px
+                bottom -2.5px
+                left 50%
+                margin-left -2px
+                cursor pointer
+                &:hover
+                    background #999
+
+        .box.active
+            font-size 20px
+
+.header-year
+    background rgba(209,176,60,0.5)
+    #logo 
+        background url(../img/logo-black.png)
+    .btn
+        border solid 1px #222
+        color #222
+    .menu-timeline
+        display inline-block
+
+@media only screen and (min-width: 768px)
+    header
+        position fixed                
+                
+
+        
 
 
 ////////////  HOME  ////////////
 
 #section-home
-    background #777
     position relative
-    min-height 400px
-    div
-        text-align center
+    background url(../img/back_home800.png)
+    text-align center 
+    min-height 600px
     #img-home
-        //background red
-        position relative
-        display block
-        top 15%
-        text-align center
-        img 
-            margin 0 auto
+        margin-left auto
+        margin-right auto
+        margin-top 50px
     #texto-home
-        position relative
-        display block
-        top 20%
-        text-align justify
-        padding 0 20% 0 20%
-    #info-home
-        position absolute
-        width 100%
-        bottom 0
+        //background transparent    
+        margin-top 50px
+        #first
+            font-size 16px
+            font-style italic
+            color #D1B03C
+            padding 0 10%
+        #last
+            font-size 13px
+            color #fff
+            padding 0 15%
 
+    #info-home
+        font-size 10px
+        font-style italic
+        color #D1B03C
+        margin-top 30px
+
+@media only screen and (min-width: 768px)
+    #section-home
+        
+        #img-home
+            position relative
+            margin-top 20px
+            max-width 320px
+            width 30%
+            height auto
+        #texto-home
+            position absolute
+            bottom 10%
+            margin 0
+
+        #info-home
+            position absolute
+            bottom 0
+            width 100%
 
 ////////////  SLIDE  ////////////
 

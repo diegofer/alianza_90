@@ -15,7 +15,7 @@ define(function (require) {
 		},
 		
         events: {
-            'click #home-btn'      : 'irHome',
+            'click #logo'          : 'irHome',
             'click #timeline-btn'  : 'irTimeline',
             'click #video-btn'     : 'irVideo',
         },
@@ -24,6 +24,7 @@ define(function (require) {
         irHome: function(event) {
         	if (Backbone.history.fragment != "") {  // si estoy en una url distinta al home 
         		router.navigate('/', true);
+                this.$el.removeClass('header-year');
         	} else {
         		this.doScroll(event.currentTarget.id);  // si estoy en home solo hago scroll hasta el top de home
         	}      	
@@ -34,7 +35,8 @@ define(function (require) {
         	if (Backbone.history.fragment != "")  // si estoy en una url distinta al home 
         	{  
         		router.navigate('/', true);
-        		
+        		this.$el.removeClass('header-year');
+
         		var self = this;
 
         		setTimeout(function(){
@@ -60,7 +62,7 @@ define(function (require) {
 			
 			var pos;
 
-			if (elemId === 'home-btn') pos = 0;
+			if (elemId === 'logo') pos = 0;
 			if (elemId === 'timeline-btn') pos = $("#section-timeline").position().top;
 			if (elemId === 'video-btn') return;
 			

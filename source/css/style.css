@@ -1,19 +1,13 @@
-body {
-  background: #808080;
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
 }
-body #main-content {
-  position: relative;
+.clearfix:after {
+  clear: both;
 }
-header {
-  margin-top: 15px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-}
-header #home-btn {
-  cursor: pointer;
+.clearfix {
+  *zoom: 1;
 }
 .spiner {
   position: absolute;
@@ -29,34 +23,153 @@ header #home-btn {
   line-height: 50px;
   font-size: 50px;
 }
-#section-home {
-  background: #777;
-  position: relative;
-  min-height: 400px;
+body {
+  background: #808080;
+  font-family: 'Merriweather', serif;
 }
-#section-home div {
+body #main-content {
+  position: relative;
+}
+header {
+  position: absolute;
   text-align: center;
+  padding: 15px 15px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+header #logo {
+  background: url("../img/logo-gold.png");
+  width: 60px;
+  height: 41px;
+  float: left;
+  cursor: pointer;
+}
+header .btn-group {
+  float: right;
+  margin-bottom: 10px;
+}
+header .btn {
+  background: transparent;
+  font-size: 8px;
+  padding: 4px 10px;
+  font-style: italic;
+  border: solid 1px #d1b03c;
+  color: #d1b03c;
+}
+header .btn-white {
+  border: solid 1px #fff;
+  color: #fff;
+}
+header .menu-timeline {
+  display: none;
+  position: relative;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+header .menu-timeline .box {
+  position: relative;
+  width: 50px;
+  height: 30px;
+  float: left;
+  border-bottom: solid 1px #222;
+}
+header .menu-timeline .box .numero {
+  display: block;
+  height: 20px;
+  line-height: 25px;
+  cursor: pointer;
+}
+header .menu-timeline .box .numero:hover {
+  color: #999;
+}
+header .menu-timeline .box .numero:hover ~ .punto {
+  background: #999;
+}
+header .menu-timeline .box .punto {
+  position: absolute;
+  background: #222;
+  width: 4px;
+  height: 4px;
+  bottom: -2.5px;
+  left: 50%;
+  margin-left: -2px;
+  cursor: pointer;
+}
+header .menu-timeline .box .punto:hover {
+  background: #999;
+}
+header .menu-timeline .box.active {
+  font-size: 20px;
+}
+.header-year {
+  background: rgba(209,176,60,0.5);
+}
+.header-year #logo {
+  background: url("../img/logo-black.png");
+}
+.header-year .btn {
+  border: solid 1px #222;
+  color: #222;
+}
+.header-year .menu-timeline {
+  display: inline-block;
+}
+@media only screen and (min-width: 768px) {
+  header {
+    position: fixed;
+  }
+}
+#section-home {
+  position: relative;
+  background: url("../img/back_home800.png");
+  text-align: center;
+  min-height: 600px;
 }
 #section-home #img-home {
-  position: relative;
-  display: block;
-  top: 15%;
-  text-align: center;
-}
-#section-home #img-home img {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
 }
 #section-home #texto-home {
-  position: relative;
-  display: block;
-  top: 20%;
-  text-align: justify;
-  padding: 0 20% 0 20%;
+  margin-top: 50px;
+}
+#section-home #texto-home #first {
+  font-size: 16px;
+  font-style: italic;
+  color: #d1b03c;
+  padding: 0 10%;
+}
+#section-home #texto-home #last {
+  font-size: 13px;
+  color: #fff;
+  padding: 0 15%;
 }
 #section-home #info-home {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
+  font-size: 10px;
+  font-style: italic;
+  color: #d1b03c;
+  margin-top: 30px;
+}
+@media only screen and (min-width: 768px) {
+  #section-home #img-home {
+    position: relative;
+    margin-top: 20px;
+    max-width: 320px;
+    width: 30%;
+    height: auto;
+  }
+  #section-home #texto-home {
+    position: absolute;
+    bottom: 10%;
+    margin: 0;
+  }
+  #section-home #info-home {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
 }
 #section-timeline {
   position: relative;

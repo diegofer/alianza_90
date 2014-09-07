@@ -61,6 +61,8 @@ define(function (require) {
 
 			this.closeActualViews();
 
+			$('header').addClass('header-year');
+
 			var yearDetalleView = new YearDetalleView({
 				model        :yearModel,
 				contenedorId :'#main-content'
@@ -80,10 +82,12 @@ define(function (require) {
 		updateSize: function() {
 		    var height = $(window).height();
 		    var width  =  $(window).width();
-		    console.log(width);
+		    console.log('window width: '+width);
 		    if (width >= 768) {
 		    	 $('.browser-height').height(height);
-		    };
+		    } else {
+		    	$('.browser-height').height('auto');
+		    }
 		   
 		},
 

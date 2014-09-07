@@ -29,6 +29,7 @@ define(function (require) {
 
 			$(document).ready(function(){
 				self.browserHeight = $(window).height(); // Obtenemos la altura del browser
+				self.browserWidth  = $(window).width();
 				self.render();
 			});
 
@@ -36,7 +37,10 @@ define(function (require) {
 		
 
 		render: function() {
-			this.$el.height(this.browserHeight)
+			if (this.browserWidth >= 768) {
+		    	 this.$el.height(this.browserHeight);
+		    };
+
 			this.$el.html( template() );	
 			$(this.contenedorId).append(this.el);
 
