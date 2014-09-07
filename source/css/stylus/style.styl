@@ -3,7 +3,7 @@
 
 
 body
-    background gray
+    background #123150
     font-family: 'Merriweather', serif;
 
     #main-content
@@ -35,9 +35,9 @@ header
         font-style italic
         border solid 1px #D1B03C
         color #D1B03C
-    .btn-white
-        border solid 1px #fff
-        color #fff
+        &:hover
+            background #D1B03C
+            color #fff
     
     .menu-timeline
         display none
@@ -75,6 +75,8 @@ header
         .box.active
             font-size 20px
 
+
+// estilos para el header logo y botones cuando estan en vista detalle
 .header-year
     background rgba(209,176,60,0.5)
     #logo 
@@ -82,6 +84,9 @@ header
     .btn
         border solid 1px #222
         color #222
+        &:hover
+            background #222
+            color #fff
     .menu-timeline
         display inline-block
 

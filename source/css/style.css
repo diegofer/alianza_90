@@ -24,7 +24,7 @@
   font-size: 50px;
 }
 body {
-  background: #808080;
+  background: #123150;
   font-family: 'Merriweather', serif;
 }
 body #main-content {
@@ -58,8 +58,8 @@ header .btn {
   border: solid 1px #d1b03c;
   color: #d1b03c;
 }
-header .btn-white {
-  border: solid 1px #fff;
+header .btn:hover {
+  background: #d1b03c;
   color: #fff;
 }
 header .menu-timeline {
@@ -112,6 +112,10 @@ header .menu-timeline .box.active {
 .header-year .btn {
   border: solid 1px #222;
   color: #222;
+}
+.header-year .btn:hover {
+  background: #222;
+  color: #fff;
 }
 .header-year .menu-timeline {
   display: inline-block;

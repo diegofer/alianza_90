@@ -109,7 +109,6 @@ define(function(require){
 
 			// mover a la izquierda
 			if (mousePos <= numBajo && !this.onEfect.timeline) {
-				console.log('jajaaj');
 				this.onEfect.timeline = true;
 				var self = this;
 
@@ -122,6 +121,7 @@ define(function(require){
 
 				);
 			}
+			
 			// mover a la derecha
 			if (mousePos >= numAlto && !this.onEfect.timeline) {
 			
