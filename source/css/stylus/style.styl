@@ -169,8 +169,8 @@ header
             list-style none
             height 100%
             overflow hidden
-            border-right solid 1px #fff
-            background red
+            //border-right solid 1px #fff
+            background gray
 
             a 
                 display block
@@ -188,10 +188,26 @@ header
                     transition opacity 400ms linear
                 &:hover .slide-hover
                     opacity 0.3
-
+                &:hover h5
+                    z-index 5
                 img
+                    position relative
                     height 100%
-                    width auto
+                    width 100%
+                    z-index 1
+                
+                h5
+                    position absolute        
+                    z-index 3
+                    bottom 50px
+                    left 5%
+                    margin 0
+                    font-style italic
+                    font-size 28px
+                    width 60%
+                    text-align left
+                    color #fff
+                    //background yellow
 
                 h4
                     position absolute
@@ -199,7 +215,7 @@ header
                     margin 0
                     z-index 5
                     bottom 50px 
-                    left 90%
+                    left 95%
                     color #D1B03C
                     font-size 80px
                     height 80px             
