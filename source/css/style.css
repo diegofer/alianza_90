@@ -202,6 +202,7 @@ header .menu-timeline .box.active {
   height: 100%;
   overflow: hidden;
   background: #808080;
+  cursor: pointer;
 }
 #section-timeline ul li a {
   display: block;
@@ -209,7 +210,7 @@ header .menu-timeline .box.active {
   height: 100%;
   cursor: pointer;
 }
-#section-timeline ul li a .slide-hover {
+#section-timeline ul li .slide-hover {
   background: #000;
   position: absolute;
   width: 100%;
@@ -224,23 +225,23 @@ header .menu-timeline .box.active {
   -ms-transition: opacity 400ms linear;
   transition: opacity 400ms linear;
 }
-#section-timeline ul li a:hover .slide-hover {
+#section-timeline ul li:hover .slide-hover {
   opacity: 0.3;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter: alpha(opacity=30);
 }
-#section-timeline ul li a:hover h5 {
+#section-timeline ul li:hover h5 {
   opacity: 0.9;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
   filter: alpha(opacity=90);
 }
-#section-timeline ul li a img {
+#section-timeline ul li img {
   position: relative;
   height: 100%;
   width: 100%;
   z-index: 1;
 }
-#section-timeline ul li a h5 {
+#section-timeline ul li h5 {
   position: absolute;
   z-index: 5;
   bottom: 50px;
@@ -260,7 +261,7 @@ header .menu-timeline .box.active {
   -ms-transition: opacity 400ms linear;
   transition: opacity 400ms linear;
 }
-#section-timeline ul li a h4 {
+#section-timeline ul li h4 {
   position: absolute;
   padding: 0;
   margin: 0;

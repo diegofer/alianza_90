@@ -150,11 +150,11 @@ define(function(require){
 		activeSwipe: function() {
 			var self = this,
 				mov  = $.fn.swipe.directions;
-				console.log(mov);
 
 			this.$el.swipe({
+
 				swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-					//console.log('HOLA SOY SWIPE');
+					console.log('HOLA SOY SWIPE');
 				    if (direction === mov.RIGHT) moveLeft();
 				    if (direction === mov.LEFT) moveRight();
 				}
@@ -280,6 +280,7 @@ define(function(require){
 		},
 
 		onClose: function() {
+			this.$el.swipe("destroy");
 	        _(this.childViews).each(function(view) {
         		view.close();
       		});

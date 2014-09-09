@@ -6,6 +6,7 @@ define(function (require) {
 	    _           = require('underscore'),
 		Backbone    = require('backbone'),
 		tpl         = require('text!tpl/YearItem.html'),
+		jqerySwipe  = require('jquery.touchSwipe'),
 
 		template    = _.template(tpl);
 
@@ -19,10 +20,17 @@ define(function (require) {
 
 		initialize: function() {		
 			console.log('inicializando YearView');
+
+			var self = this;
+			this.$el.swipe({
+				tap:function(event, target) {
+					self.goTo();
+				}
+			})
 		},
 
 		events: {
-			//'click': 'alClick'
+			'click': 'goTo'
 		},
 		
 
@@ -31,9 +39,13 @@ define(function (require) {
     		return this.el;
 		},
 
-		alClick: function() {
-			router.navigate('year/'+ this.model.get('year'), true);
-		}
+		goTo: function() {
+			router.navigate(''+this.model.get('year'), true);
+		},
+
+		onClose: function() {
+			this.$el.swipe("destroy");
+	    },
 
 
 	});
