@@ -149,7 +149,7 @@ define(function(require){
 		activeSwipe: function() {
 			var self = this;
 
-			this.$ul.swipe({
+			this.$el.swipe({
 				swipe:function(event, direction, distance, duration, fingerCount) {
 				    if (direction === 'LEFT') moveLeft();
 				    if (direction === 'RIGHT') moveRight();
@@ -163,7 +163,6 @@ define(function(require){
 					function(){
 						self.onEfect.timeline = false;
 					}
-
 				);
 			}
 
@@ -174,7 +173,6 @@ define(function(require){
 					function(){
 						self.onEfect.timeline = false;
 					}
-
 				);
 			}
 		},
