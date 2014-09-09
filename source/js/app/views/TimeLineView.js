@@ -152,15 +152,12 @@ define(function(require){
 				mov  = $.fn.swipe.directions;
 
 			this.$el.swipe({
-
-				swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-					console.log('HOLA SOY SWIPE');
-				    if (direction === mov.RIGHT) moveLeft();
-				    if (direction === mov.LEFT) moveRight();
-				}
+				swipeLeft: moveRight,
+				swipeRight: moveLeft,
+				//allowPageScroll:"vertical"
 			});
 
-			function moveRight() {
+			function moveRight(event, direction, distance, duration, fingerCount) {
 				self.$ul.animate(
 					{right: self.maxRight()}, 
 					1500, 
@@ -170,7 +167,7 @@ define(function(require){
 				);
 			}
 
-			function moveLeft() {
+			function moveLeft(event, direction, distance, duration, fingerCount) {
 				
 				self.$ul.animate(
 					{right: 0}, 

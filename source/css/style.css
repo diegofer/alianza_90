@@ -81,17 +81,17 @@ header .menu-timeline .box {
   float: left;
   border-bottom: solid 1px #222;
 }
+header .menu-timeline .box:hover {
+  color: #999;
+}
+header .menu-timeline .box:hover .punto {
+  background: #999;
+}
 header .menu-timeline .box .numero {
   display: block;
   height: 20px;
   line-height: 25px;
   cursor: pointer;
-}
-header .menu-timeline .box .numero:hover {
-  color: #999;
-}
-header .menu-timeline .box .numero:hover ~ .punto {
-  background: #999;
 }
 header .menu-timeline .box .punto {
   position: absolute;
@@ -364,6 +364,7 @@ header .menu-timeline .box.active {
   filter: alpha(opacity=70);
   color: #fff;
   padding: 2px 5px;
+  font-size: 8px;
 }
 #year #year-slide:hover #controles {
   opacity: 0.6;
@@ -468,6 +469,9 @@ header .menu-timeline .box.active {
     text-align: justify;
     font-size: 14px;
     color: #000;
+  }
+  #year #year-slide ul#carousel li span {
+    font-size: 12px;
   }
   #year #year-slide #controles {
     width: 60px;

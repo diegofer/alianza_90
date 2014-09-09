@@ -4,27 +4,32 @@ define(function (require) {
 
 	var $           = require('jquery'),
 	    _           = require('underscore'),
-		Backbone    = require('backbone');
+		Backbone    = require('backbone'),
 	
-
+        $boxItems   = $('.box', 'header');
 
 	return  Backbone.View.extend({
 
 		initialize: function() {		
 			console.log('inicializando HeaderView');
+            console.log($boxItems);
 		},
 		
         events: {
             'click #logo'          : 'irHome',
             'click #timeline-btn'  : 'irTimeline',
             'click #video-btn'     : 'irVideo',
+            'click .box'           : 'goToSlide'
+        },
+
+        render: function() {
+            console.log(router);
         },
 
 
         irHome: function(event) {
         	if (Backbone.history.fragment != "") {  // si estoy en una url distinta al home 
         		router.navigate('/', true);
-                this.$el.removeClass('header-year');
         	} else {
         		this.doScroll(event.currentTarget.id);  // si estoy en home solo hago scroll hasta el top de home
         	}      	
@@ -35,7 +40,6 @@ define(function (require) {
         	if (Backbone.history.fragment != "")  // si estoy en una url distinta al home 
         	{  
         		router.navigate('/', true);
-        		this.$el.removeClass('header-year');
 
         		var self = this;
 
@@ -48,6 +52,10 @@ define(function (require) {
         	{
         		this.doScroll(event.currentTarget.id);  // si estoy en home solo hago scroll hasta el top del timeline
         	}      	
+        },
+
+        goToSlide: function(event) {
+            router.navigate(event.currentTarget.id, true);
         },
 
 
@@ -72,6 +80,14 @@ define(function (require) {
 		    	self.delegateEvents();             
 		    });
 		},
+
+        selectBoxItem: function(boxItem) {
+            $boxItems.removeClass('active');
+
+            if (boxItem) {
+                this.$el.find('#'+boxItem).addClass('active');
+            }
+        }
 
 
 	});

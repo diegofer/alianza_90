@@ -10,7 +10,7 @@ define(function (require) {
 		TimeLineView      = require('app/views/TimeLineView'),
 		YearDetalleView   = require('app/views/YearDetalleView'),
 
-		$mainContent      = $('#main-content');
+		$header           = $('header');
 		
 
 
@@ -22,7 +22,7 @@ define(function (require) {
 			this.years = data.years;
 			this.actualViews = [];
 
-			var headerView = new HeaderView({ el: $('header')});
+			this.headerView = new HeaderView({ el: $header});
 
 			$(window).resize(this.updateSize);     // When the browser changes size
 		},
@@ -35,6 +35,7 @@ define(function (require) {
 
 		inicio: function() {
 			this.closeActualViews();
+			$header.removeClass('header-year');
 
 			var homeView = new HomeView({
 				contenedorId: '#main-content'
@@ -61,7 +62,8 @@ define(function (require) {
 
 			this.closeActualViews();
 
-			$('header').addClass('header-year');
+			$header.addClass('header-year');   // mostramos el menu en el header
+			this.headerView.selectBoxItem(yearModel.get('year'));  // destacamos el elemento activo
 
 			var yearDetalleView = new YearDetalleView({
 				model        :yearModel,
