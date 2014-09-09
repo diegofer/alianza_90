@@ -5,8 +5,9 @@ define(function(require){
 	var $                = require('jquery'),
 		_                = require('underscore'),
 		Backbone         = require('backbone'),
+		jqerySwipe       = require('src/carouFredSel/helper-plugins/jquery.touchSwipe.min'),
 
-		YearItemView         = require('app/views/YearItemView');
+		YearItemView     = require('app/views/YearItemView');
 
 	
  
@@ -87,6 +88,9 @@ define(function(require){
 			
 			//this.rightMax = this.timeLineWidth - contentWidth;
 			this.$ul.width(this.timeLineWidth);
+
+
+			this.activeSwipe();
 		},
 
 		
@@ -114,14 +118,14 @@ define(function(require){
 
 				this.$ul.animate(
 					{right: 0}, 
-					1000, 
+					1500, 
 					function(){
 						self.onEfect.timeline = false;
 					}
 
 				);
 			}
-			
+
 			// mover a la derecha
 			if (mousePos >= numAlto && !this.onEfect.timeline) {
 			
@@ -130,7 +134,7 @@ define(function(require){
 
 				this.$ul.animate(
 					{right: self.maxRight()}, 
-					1000, 
+					1500, 
 					function(){
 						self.onEfect.timeline = false;
 					}
@@ -140,6 +144,39 @@ define(function(require){
 
 			
 
+		},
+
+		activeSwipe: function() {
+			var self = this;
+
+			this.$ul.swipe({
+				swipe:function(event, direction, distance, duration, fingerCount) {
+				    if (direction === 'LEFT') moveLeft();
+				    if (direction === 'RIGHT') moveRight();
+				}
+			});
+
+			function moveRight() {
+				self.$ul.animate(
+					{right: self.maxRight()}, 
+					1500, 
+					function(){
+						self.onEfect.timeline = false;
+					}
+
+				);
+			}
+
+			function moveLeft() {
+				self.$ul.animate(
+					{right: 0}, 
+					1500, 
+					function(){
+						self.onEfect.timeline = false;
+					}
+
+				);
+			}
 		},
 
 

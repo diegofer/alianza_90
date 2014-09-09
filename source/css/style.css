@@ -230,7 +230,9 @@ header .menu-timeline .box.active {
   filter: alpha(opacity=30);
 }
 #section-timeline ul li a:hover h5 {
-  z-index: 5;
+  opacity: 0.9;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+  filter: alpha(opacity=90);
 }
 #section-timeline ul li a img {
   position: relative;
@@ -240,7 +242,7 @@ header .menu-timeline .box.active {
 }
 #section-timeline ul li a h5 {
   position: absolute;
-  z-index: 3;
+  z-index: 5;
   bottom: 50px;
   left: 5%;
   margin: 0;
@@ -249,6 +251,14 @@ header .menu-timeline .box.active {
   width: 60%;
   text-align: left;
   color: #fff;
+  opacity: 0.3;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  filter: alpha(opacity=30);
+  -webkit-transition: opacity 400ms linear;
+  -moz-transition: opacity 400ms linear;
+  -o-transition: opacity 400ms linear;
+  -ms-transition: opacity 400ms linear;
+  transition: opacity 400ms linear;
 }
 #section-timeline ul li a h4 {
   position: absolute;
