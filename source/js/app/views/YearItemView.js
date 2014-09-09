@@ -15,13 +15,14 @@ define(function (require) {
 	return  Backbone.View.extend({
 
 		tagName: 'li',
+		//className: 'noSwipe',
 
 		initialize: function() {		
 			console.log('inicializando YearView');
 		},
 
 		events: {
-			'click': 'alClick'
+			//'click': 'alClick'
 		},
 		
 
@@ -31,7 +32,6 @@ define(function (require) {
 		},
 
 		alClick: function() {
-			console.log('hols soy click');
 			router.navigate('year/'+ this.model.get('year'), true);
 		}
 

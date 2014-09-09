@@ -17,7 +17,7 @@ require.config({
 		},
 
 		'jquery.hoverIntent'                                      : ['jquery'],
-		'src/carouFredSel/helper-plugins/jquery.touchSwipe.min'   : ['jquery'], 
+		'jquery.touchSwipe'                                       : ['jquery'], 
 		'src/customScrollbar/jquery.mCustomScrollbar.concat.min'  : ['jquery'],
 		'src/carouFredSel/jquery.carouFredSel-min'                : ['jquery'],
 		'src/Nivo-Lightbox/nivo-lightbox.min'                     : ['jquery']

@@ -5,7 +5,7 @@ define(function(require){
 	var $                = require('jquery'),
 		_                = require('underscore'),
 		Backbone         = require('backbone'),
-		jqerySwipe       = require('src/carouFredSel/helper-plugins/jquery.touchSwipe.min'),
+		jqerySwipe       = require('jquery.touchSwipe'),
 
 		YearItemView     = require('app/views/YearItemView');
 
@@ -150,11 +150,11 @@ define(function(require){
 		activeSwipe: function() {
 			var self = this,
 				mov  = $.fn.swipe.directions;
-				//console.log(mov.LEFT);
+				console.log(mov);
 
-			this.$ul.swipe({
-				swipe:function(event, direction, distance, duration, fingerCount) {
-					console.log('HOLA SOY SWIPE '+direction);
+			this.$el.swipe({
+				swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+					//console.log('HOLA SOY SWIPE');
 				    if (direction === mov.RIGHT) moveLeft();
 				    if (direction === mov.LEFT) moveRight();
 				}
