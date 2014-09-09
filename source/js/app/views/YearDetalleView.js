@@ -43,7 +43,7 @@ define(function (require) {
 
 			if (this.browserWidth >= 768 ) this.$el.find('.browser-height').height(this.browserHeight);
 					
-    		$(this.contenedorId).html(this.el);
+    		$(this.contenedorId).append(this.el);
 
     		// setear scroll en texto
     		//$.mCustomScrollbar.defaults.scrollButtons.enable=true;

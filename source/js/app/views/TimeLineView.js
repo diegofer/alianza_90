@@ -51,7 +51,8 @@ define(function(require){
 		},
 
 		render: function() {
-			this.$el.height(this.browserHeight)
+			this.$el.height(this.browserHeight);
+			//this.$el.css('top', this.browserHeight);
 			$(this.contenedorId).append(this.el);
 			this.renderChildren();
 		},
@@ -76,7 +77,7 @@ define(function(require){
 
 			slides.width(this.slideWidth);
 		
-			this.$el.html(this.$ul);
+			this.$el.append(this.$ul);
 
 			var realWidth = this.getSlideWidth();
 			this.timeLineWidth = realWidth * numSlides;  
@@ -147,12 +148,15 @@ define(function(require){
 		},
 
 		activeSwipe: function() {
-			var self = this;
+			var self = this,
+				mov  = $.fn.swipe.directions;
+				//console.log(mov.LEFT);
 
-			this.$el.swipe({
+			this.$ul.swipe({
 				swipe:function(event, direction, distance, duration, fingerCount) {
-				    if (direction === 'LEFT') moveLeft();
-				    if (direction === 'RIGHT') moveRight();
+					console.log('HOLA SOY SWIPE '+direction);
+				    if (direction === mov.RIGHT) moveLeft();
+				    if (direction === mov.LEFT) moveRight();
 				}
 			});
 
@@ -167,6 +171,7 @@ define(function(require){
 			}
 
 			function moveLeft() {
+				
 				self.$ul.animate(
 					{right: 0}, 
 					1500, 

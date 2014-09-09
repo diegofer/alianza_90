@@ -19,12 +19,21 @@ define(function (require) {
 		initialize: function() {		
 			console.log('inicializando YearView');
 		},
+
+		events: {
+			'click': 'alClick'
+		},
 		
 
 		render: function() {
 			this.$el.html( template( this.model.toJSON() ) );		
     		return this.el;
 		},
+
+		alClick: function() {
+			console.log('hols soy click');
+			router.navigate('year/'+ this.model.get('year'), true);
+		}
 
 
 	});

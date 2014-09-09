@@ -303,6 +303,25 @@ header .menu-timeline .box.active {
   text-align: center;
   padding: 0 10%;
 }
+#year #year-top .content-text h1,
+#year #year-bottom .content-text h1 {
+  color: #d1b03c;
+  font-size: 3em;
+}
+#year #year-top .content-text h2,
+#year #year-bottom .content-text h2 {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 30px;
+  color: #191919;
+}
+#year #year-top .content-text h3,
+#year #year-bottom .content-text h3 {
+  color: #191919;
+  font-style: italic;
+  font-size: 28px;
+  font-weight: bold;
+}
 #year #year-slide {
   display: block;
   background: #008000;
@@ -418,11 +437,11 @@ header .menu-timeline .box.active {
   #year #year-top .content-text h1,
   #year #year-bottom .content-text h1 {
     margin: 0;
-    font-size: 5em;
+    font-size: 4em;
   }
   #year #year-top .content-text h2,
   #year #year-bottom .content-text h2 {
-    font-size: 3em;
+    font-size: 45px;
   }
   #year #year-top .content-text h3,
   #year #year-bottom .content-text h3 {
@@ -445,6 +464,9 @@ header .menu-timeline .box.active {
     position: absolute;
     top: 40%;
     bottom: 0;
+    text-align: justify;
+    font-size: 14px;
+    color: #000;
   }
   #year #year-slide #controles {
     width: 60px;
