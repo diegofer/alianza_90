@@ -71,21 +71,26 @@ header .btn:hover {
 header .menu-timeline {
   display: none;
   position: relative;
-  font-size: 12px;
   font-family: sans-serif;
+  border-bottom: dotted 1px #222;
 }
 header .menu-timeline .box {
   position: relative;
   width: 50px;
   height: 30px;
   float: left;
-  border-bottom: solid 1px #222;
+  font-size: 12px;
+  -webkit-transition: font-size 200ms linear;
+  -moz-transition: font-size 200ms linear;
+  -o-transition: font-size 200ms linear;
+  -ms-transition: font-size 200ms linear;
+  transition: font-size 200ms linear;
 }
 header .menu-timeline .box:hover {
-  color: #999;
+  color: #555;
 }
 header .menu-timeline .box:hover .punto {
-  background: #999;
+  background: #555;
 }
 header .menu-timeline .box .numero {
   display: block;
@@ -96,18 +101,32 @@ header .menu-timeline .box .numero {
 header .menu-timeline .box .punto {
   position: absolute;
   background: #222;
-  width: 4px;
-  height: 4px;
+  width: 2px;
+  height: 2px;
   bottom: -2.5px;
   left: 50%;
   margin-left: -2px;
+  border: 1px solid #000;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
   cursor: pointer;
+  -webkit-transition: 200ms linear;
+  -moz-transition: 200ms linear;
+  -o-transition: 200ms linear;
+  -ms-transition: 200ms linear;
+  transition: 200ms linear;
 }
 header .menu-timeline .box .punto:hover {
   background: #999;
 }
 header .menu-timeline .box.active {
   font-size: 20px;
+}
+header .menu-timeline .box.active .punto {
+  width: 4px;
+  height: 4px;
+  bottom: -3.5px;
+  margin-left: -3px;
 }
 .header-year {
   background: rgba(209,176,60,0.5);
