@@ -69,14 +69,14 @@ define(function (require) {
 			this.$el.find('#carousel').carouFredSel({
 				responsive: true,
 				width: '100%',
-				height: 'auto',
+				//height: 'auto',
     			prev: '#prev2',
 				next: '#next2',
 				auto: false,
 
 				scroll: 1,
 				items: {
-					width: widthSlide,
+					//width: widthSlide,
 					height: 'auto',
 					visible: {
 						min: 2,

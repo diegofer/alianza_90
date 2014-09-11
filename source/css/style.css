@@ -342,20 +342,14 @@ header .menu-timeline .box.active .punto {
   font-size: 28px;
   font-weight: bold;
 }
-#year #year-slide {
-  display: block;
-  background: #008000;
-  position: relative;
-  height: auto;
-}
 #year #year-slide ul#carousel {
-  background: #f00;
   display: block;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 #year #year-slide ul#carousel li {
+  display: block;
   position: relative;
   padding: 0;
   margin: 0;
