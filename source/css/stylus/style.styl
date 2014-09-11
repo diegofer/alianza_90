@@ -24,7 +24,8 @@ header
         width 60px
         height 41px
         float left  
-        cursor pointer  
+        cursor pointer 
+        margin-bottom 10px 
     .btn-group
         float right
         margin-bottom 10px
@@ -43,13 +44,14 @@ header
         display none
         position relative
         font-family sans-serif
-        border-bottom dotted 1px #222
+        
         .box
             position relative
-            width 50px
+            width 40px
             height 30px
             float left   
-            font-size 12px     
+            font-size 10px  
+            border-bottom solid 1px #222   
             transition font-size 200ms linear
             &:hover
                 color #555
@@ -77,7 +79,7 @@ header
                     background #999
 
         .box.active
-            font-size 20px
+            font-size 15px
             .punto
                 width 4px
                 height 4px
@@ -87,6 +89,7 @@ header
 // estilos para el header logo y botones cuando estan en vista detalle
 .header-year
     background rgba(209,176,60,0.5)
+    position relative
     #logo 
         background url(../img/logo-black.png)
     .btn
@@ -100,8 +103,17 @@ header
 
 @media only screen and (min-width: 768px)
     header
-        position fixed                
-                
+        position fixed   
+
+        .menu-timeline
+            .box
+                font-size 12px  
+                width 50px   
+            .box.active
+                font-size 20px  
+
+    .header-year      
+        position fixed          
 
         
 
@@ -242,17 +254,29 @@ header
 ////////////  DETALLE  ////////////
 
 #year
-    background white
-
+    //margin-top 80px
     #year-top
     #year-bottom
-        background white
+        //background white
 
         .content-img
-            img
+            img             
                 margin 0 auto 
-        
+                width 100%
+                height 100% 
+            img.visible
+                display none
+                     
+     
         .content-text
+            img
+                display block
+                width 100%
+                height auto
+                margin-bottom 20px
+                border 2px solid #777
+                border-radius 10px
+
             > div 
                 text-align center
                 padding 0 10%
@@ -351,7 +375,7 @@ header
 @media only screen and (min-width: 768px)
     #year
         position relative
-        
+        margin-top 0
         #year-top
         #year-bottom
             position relative
@@ -364,11 +388,13 @@ header
                 vertical-aling top   
             .content-img
                 img
-                    width 100%
-                    height 100%
-                    margin 0  
+                    margin 0
+                img.visible
+                    display block
             .content-text
                 z-index 8
+                img
+                    display none
                 h1
                     margin 0 
                     font-size 4em

@@ -1,15 +1,16 @@
 
-<section id="year-top" class="browser-height">
+<section id="year-top" class="browser-height clearfix">
 	
-	<div class="content-img contenedor">
-		<img src="img/{{img_top}}" class="img-responsive" alt="">
+	<div class="content-img contenedor content-img-top">
+		<img class="img-top visible" src="img/{{img_top}}"  alt="">
 	</div>
 	
 	<div class="contenedor content-text clearfix">
 		<div class="clearfix">
 			
-			<h1>{{year}} </h1>
+			<h1 class="clearfix">{{year}} </h1>
 			<h3> {{ subtitle }} </h3>
+			<img class="img-top" src="img/{{img_top}}" alt="">
 			<div class="hacer-scroll">
 				{{review_1|safe}}
 			</div>
