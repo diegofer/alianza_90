@@ -73,9 +73,12 @@ define(function(require){
 			this.slideWidth   = 300;
 			var slides       = this.$ul.children(); 
 
-			if (contentWidth <= 1366 ) this.slideWidth   = Math.ceil(contentWidth / 4);  //redondeamos por encima
+			if (contentWidth > 1350) this.slideWidth = Math.ceil(contentWidth / 4.3 );
+			else if (contentWidth > 768) this.slideWidth = Math.ceil(contentWidth / 3.5 );
+			else if (contentWidth > 480) this.slideWidth = Math.ceil(contentWidth / 3.3 );
+			
 
-			slides.width(this.slideWidth);
+			 slides.width(this.slideWidth);
 		
 			this.$el.append(this.$ul);
 
@@ -87,7 +90,6 @@ define(function(require){
 				$(this).css('left', realWidth * i);        // posisionamos los slides 
 			});
 			
-			//this.rightMax = this.timeLineWidth - contentWidth;
 			this.$ul.width(this.timeLineWidth);
 
 
