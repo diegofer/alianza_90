@@ -60,17 +60,18 @@ define(function (require) {
 
 
 		setCarrousel: function() {
-			var $elem = this.$el.find('#year-slide'),  // Obtenemos el contenedor
-				widthSlide = $elem.width() / 2,                 // obtenemos su width dividido por 2
-				$li   = $elem.find('li').width(widthSlide);     // le pasamos el width a cada slide
+			var $elem        = this.$el.find('#year-slide'),  // Obtenemos el contenedor
+				widthSlide   = $elem.width() / 2,                 // obtenemos su width dividido por 2
+				$li          = $elem.find('li').width(widthSlide),     // le pasamos el width a cada slide
+				$carrusel    = this.$el.find('#carousel');
 
-			this.$el.find('#carousel').carouFredSel({
+			$carrusel.carouFredSel({
 				responsive: true,
 				width: '100%',
 				//height: 'auto',
-    			prev: '#prev2',
-				next: '#next2',
-				auto: false,
+    			//prev: '#prev2',
+				//next: '#next2',
+				auto: true,
 
 				scroll: 1,
 				items: {
@@ -82,6 +83,19 @@ define(function (require) {
 					}
 				}
     		});
+
+    		$carrusel.swipe({
+				excludedElements: "button, input, select, textarea, .noSwipe",
+				swipeLeft: function() {
+					$carrusel.trigger('next', 1);
+				},
+				swipeRight: function() {
+					$carrusel.trigger('prev', 1);
+				},
+				tap: function(event, target) {
+					window.open($(target).closest('.carusel-cnt').find('carusel-cnt-link').attr('href'), '_self');
+				}
+			});
 
     		this.$el.find('.destacar').nivoLightbox({
     			effect: 'fadeScale', 

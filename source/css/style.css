@@ -130,7 +130,7 @@ header .menu-timeline .box.active .punto {
   margin-left: -3px;
 }
 .header-year {
-  background: rgba(209,176,60,0.5);
+  background: rgba(209,176,60,0.8);
   position: relative;
 }
 .header-year #logo {
@@ -160,6 +160,7 @@ header .menu-timeline .box.active .punto {
   }
   .header-year {
     position: fixed;
+    background: rgba(209,176,60,0.5);
   }
 }
 #section-home {
@@ -318,6 +319,9 @@ header .menu-timeline .box.active .punto {
   #section-timeline {
     background: #f00;
   }
+}
+#year {
+  background: url("../img/backinterna.jpg");
 }
 #year #year-top .content-img img,
 #year #year-bottom .content-img img {
