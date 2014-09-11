@@ -5,6 +5,8 @@ define(function(require){
 	var $                = require('jquery'),
 		_                = require('underscore'),
 		Backbone         = require('backbone'),
+
+		carouFredSel     = require('src/carouFredSel/jquery.carouFredSel-min'),	
 		jqerySwipe       = require('jquery.touchSwipe'),
 
 		YearItemView     = require('app/views/YearItemView');
@@ -46,8 +48,8 @@ define(function(require){
 
 		events: {
 			'mousemove'  : 'animarTimeSlide',
-			'mouseenter li'  : 'onMouseEnter',
-			'mouseleave li'  : 'onMouseLeave',
+			//'mouseenter li'  : 'onMouseEnter',
+			//'mouseleave li'  : 'onMouseLeave',
 		},
 
 		render: function() {
@@ -58,42 +60,70 @@ define(function(require){
 		},
 
 		renderChildren: function() {
-			this.$ul = $('<ul>');
+			this.$carrusel = $('<ul id="carrusel">');
 	
 			_.each(this.collection.models, function(year){
 				var yearItemView = new YearItemView({model: year});
-				this.$ul.append( yearItemView.render() );
+				this.$carrusel.append( yearItemView.render() );
 				this.childViews.push(yearItemView);   // Almacenamos las childviews para luego poder eliminarlas
 			}, this);
 
-			//definimos anchos del ul de acuerdo a la pantalla
-			var numSlides    = this.childViews.length;
-			var contentWidth = this.$el.width();
-			this.timeLineWidth = 0;
-			this.slideWidth   = 300;
-			var slides       = this.$ul.children(); 
+	
+			this.$el.append(this.$carrusel);
 
-			if (contentWidth > 1350) this.slideWidth = Math.ceil(contentWidth / 4.3 );
-			else if (contentWidth > 768) this.slideWidth = Math.ceil(contentWidth / 3.5 );
-			else if (contentWidth > 480) this.slideWidth = Math.ceil(contentWidth / 3.3 );
-			
-
-			 slides.width(this.slideWidth);
-		
-			this.$el.append(this.$ul);
-
-			var realWidth = this.getSlideWidth();
-			this.timeLineWidth = realWidth * numSlides;  
-
-
-			slides.each(function(i){
-				$(this).css('left', realWidth * i);        // posisionamos los slides 
+			var self = this;  
+			this.$carrusel.find('#img-1920').load(function(){    // activar carrusel cuando primer imagen este disponible
+				self.setCarrusel();
+				
 			});
-			
-			this.$ul.width(this.timeLineWidth);
+		},
 
 
-			this.activeSwipe();
+		setCarrusel: function(){
+			this.$carrusel.carouFredSel({
+				responsive: true,
+				
+				circular: false,
+				infinite:false,
+
+				scroll: {
+					play: false,
+					items: 1,
+					easing: 'linear'
+				},
+
+				items: {
+					visible: {
+						min: 1.5,
+						max: 4.5
+					},
+					//height: '100%',
+					//width: 'auto'
+				}
+    		});
+
+    		this.setSwipe();
+		},
+
+
+		setSwipe: function() {
+			var self = this;
+			this.$carrusel.swipe({
+
+				excludedElements: "button, input, select, textarea, .noSwipe",
+
+				swipeLeft: function() {
+					self.$carrusel.trigger('next', 1);
+				},
+
+				swipeRight: function() {
+					self.$carrusel.trigger('prev', 1);
+				},
+
+				tap: function(event, target) {
+					window.open($(target).closest('.carusel-cnt').find('carusel-cnt-link').attr('href'), '_self');
+				}
+			});
 		},
 
 		
@@ -108,78 +138,43 @@ define(function(require){
 
 			//console.log("mousepos: "+mousePos+" numAlto: "+numAlto);
 
-			// finalizar movimiento
+			//finalizar movimiento
 			if (mousePos > numBajo && mousePos < numAlto) {
 				this.onEfect.timeline = false;
-				this.$ul.stop(true, false);
+				//this.$ul.stop(true, false);
 			};
 
 			// mover a la izquierda
 			if (mousePos <= numBajo && !this.onEfect.timeline) {
-				this.onEfect.timeline = true;
 				var self = this;
+				this.onEfect.timeline = true;
 
-				this.$ul.animate(
-					{right: 0}, 
-					1500, 
-					function(){
+				this.$carrusel.trigger('prev',{
+					items: 1, 
+					onAfter: function(){
 						self.onEfect.timeline = false;
 					}
-
-				);
+				});
 			}
 
 			// mover a la derecha
 			if (mousePos >= numAlto && !this.onEfect.timeline) {
-			
-				this.onEfect.timeline = true;
 				var self = this;
+				this.onEfect.timeline = true;
 
-				this.$ul.animate(
-					{right: self.maxRight()}, 
-					1500, 
-					function(){
+				this.$carrusel.trigger('next',{
+					items: 1, 
+					onAfter: function(){
 						self.onEfect.timeline = false;
 					}
-
-				);
+				});
 			};
 
-			
 
 		},
 
-		activeSwipe: function() {
-			var self = this,
-				mov  = $.fn.swipe.directions;
 
-			this.$el.swipe({
-				swipeLeft: moveRight,
-				swipeRight: moveLeft,
-				//allowPageScroll:"vertical"
-			});
-
-			function moveRight(event, direction, distance, duration, fingerCount) {
-				self.$ul.animate(
-					{right: self.maxRight()}, 
-					1500, 
-					function(){
-						self.onEfect.timeline = false;
-					}
-				);
-			}
-
-			function moveLeft(event, direction, distance, duration, fingerCount) {
-				
-				self.$ul.animate(
-					{right: 0}, 
-					1500, 
-					function(){
-						self.onEfect.timeline = false;
-					}
-				);
-			}
-		},
+		
 
 
 		onMouseEnter: function(event) {

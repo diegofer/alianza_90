@@ -219,36 +219,26 @@ header .menu-timeline .box.active .punto {
   }
 }
 #section-timeline {
-  position: relative;
-  text-align: center;
-  background: #d6d6d6;
+  background: #999;
   width: 100%;
-  overflow: hidden;
-}
-#section-timeline ul {
   position: relative;
-  list-style: none;
+}
+#section-timeline ul#carrusel {
   margin: 0;
   padding: 0;
-  height: 100%;
-  overflow: hidden;
-}
-#section-timeline ul li {
-  position: absolute;
   list-style: none;
-  height: 100%;
-  overflow: hidden;
-  border-right: solid 1px #fff;
-  background: #808080;
-  cursor: pointer;
-}
-#section-timeline ul li a {
   display: block;
-  width: 100%;
   height: 100%;
-  cursor: pointer;
+  position: relative;
 }
-#section-timeline ul li .slide-hover {
+#section-timeline ul#carrusel li {
+  background: #ff0;
+  display: block;
+  float: left;
+  height: 100%;
+  position: relative;
+}
+#section-timeline ul#carrusel li .slide-hover {
   background: #000;
   position: absolute;
   width: 100%;
@@ -263,30 +253,31 @@ header .menu-timeline .box.active .punto {
   -ms-transition: opacity 400ms linear;
   transition: opacity 400ms linear;
 }
-#section-timeline ul li:hover .slide-hover {
+#section-timeline ul#carrusel li:hover .slide-hover {
   opacity: 0.3;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter: alpha(opacity=30);
 }
-#section-timeline ul li:hover h5 {
+#section-timeline ul#carrusel li:hover h5 {
   opacity: 0.9;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
   filter: alpha(opacity=90);
 }
-#section-timeline ul li img {
+#section-timeline ul#carrusel li img {
   position: relative;
   height: 100%;
   width: 100%;
   z-index: 1;
+  display: block;
 }
-#section-timeline ul li h5 {
+#section-timeline ul#carrusel li h5 {
   position: absolute;
   z-index: 5;
   bottom: 50px;
   left: 5%;
   margin: 0;
   font-style: italic;
-  font-size: 28px;
+  font-size: 16px;
   width: 60%;
   text-align: left;
   color: #fff;
@@ -299,7 +290,7 @@ header .menu-timeline .box.active .punto {
   -ms-transition: opacity 400ms linear;
   transition: opacity 400ms linear;
 }
-#section-timeline ul li h4 {
+#section-timeline ul#carrusel li h4 {
   position: absolute;
   padding: 0;
   margin: 0;
@@ -307,9 +298,9 @@ header .menu-timeline .box.active .punto {
   bottom: 50px;
   left: 95%;
   color: #d1b03c;
-  font-size: 80px;
-  height: 80px;
-  line-height: 80px;
+  font-size: 40px;
+  height: 40px;
+  line-height: 40px;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
@@ -323,7 +314,15 @@ header .menu-timeline .box.active .punto {
 }
 @media only screen and (min-width: 768px) {
   #section-timeline {
-    background: #f00;
+    background: #666;
+  }
+  #section-timeline ul#carrusel li h5 {
+    font-size: 28px;
+  }
+  #section-timeline ul#carrusel li h4 {
+    font-size: 80px;
+    height: 80px;
+    line-height: 80px;
   }
 }
 #year {
