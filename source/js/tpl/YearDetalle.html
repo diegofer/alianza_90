@@ -23,10 +23,10 @@
 <section id="year-slide" class="clearfix">
 	<ul id="carousel" class="clearfix">
 
-		{% for img in slide %}
+		{% for key, img in slide %}	
 	  		<li>
 				<a class="destacar" href="img/{{img.path}}" data-lightbox-gallery="gallery1" title="{{img.caption}}">
-					<img src="img/{{img.path}}" title="hola soy caption"/>
+					<img id="{{key}}" src="img/{{img.path}}" title="hola soy caption"/>
 				</a>
 				<span>{{img.caption}}</span>
 			</li>

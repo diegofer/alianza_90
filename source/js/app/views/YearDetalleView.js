@@ -45,19 +45,17 @@ define(function (require) {
 					
     		$(this.contenedorId).append(this.el);
 
-    		// setear scroll en texto
-    		//$.mCustomScrollbar.defaults.scrollButtons.enable=true;
-    		$(".hacer-scroll").mCustomScrollbar({
+    		$(".hacer-scroll").mCustomScrollbar({      // setear scroll en texto
 				theme:"dark-2",
 				scrollButtons:{
 					enable:false
 				}
 			});
 
-    		var self = this;
-    		setTimeout(function(){
-        		self.setCarrousel();
-    		}, 100);
+    		var self = this;  
+			this.$el.find('#img1').load(function(){    // activar carrusel cuando primer imagen este disponible
+				self.setCarrousel();
+			});
 		},
 
 
