@@ -2,17 +2,17 @@ define(function (require) {
 
 	"use strict";
 
-	var $           = require('jquery'),
-	    _           = require('underscore'),
-		Backbone    = require('backbone'),
-	
-        $boxItems   = $('.box', 'header');
+	var $            = require('jquery'),
+	    _            = require('underscore'),
+        Backbone     = require('backbone'),
+        NivoLightbox = require('src/Nivo-Lightbox/nivo-lightbox.min'),	   
+        $boxItems    = $('.box', 'header');
 
 	return  Backbone.View.extend({
 
 		initialize: function() {		
 			console.log('inicializando HeaderView');
-            console.log($boxItems);
+            this.render();
 		},
 		
         events: {
@@ -23,7 +23,10 @@ define(function (require) {
         },
 
         render: function() {
-            console.log(router);
+            //$(document).ready(function(){
+            var elem =  this.$el.find('#video-btn').nivoLightbox();
+            //});
+            console.log(elem);
         },
 
 

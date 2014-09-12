@@ -69,6 +69,7 @@ header .btn {
   -o-transition: 300ms linear;
   -ms-transition: 300ms linear;
   transition: 300ms linear;
+  text-decoration: none;
 }
 header .btn:hover {
   background: #d1b03c;
