@@ -23,11 +23,6 @@ define(function(require){
 		
 		initialize: function(options) {
 			console.log('inicializando TimeLineView');
-
-			var numero = (1000 * 20 ) / 100;
-			console.log('CALCULO: '+numero);
-
-
 			
 			this.contenedorId = options.contenedorId;
 			this.childViews = [];
@@ -95,9 +90,9 @@ define(function(require){
 				items: {
 					visible: {
 						min: 1.5,
-						max: 4.5
+						max: 4
 					},
-					//height: '100%',
+					//height: 'auto',
 					//width: 'auto'
 				}
     		});
