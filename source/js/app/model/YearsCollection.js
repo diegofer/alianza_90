@@ -11,7 +11,7 @@ define(function (require) {
 	return  Backbone.Collection.extend({
 
 		model: yearModel,
-		url: "js/app/model/data.json?v=9",
+		url: "js/app/model/data.json?v=10",
 	});
 
 });

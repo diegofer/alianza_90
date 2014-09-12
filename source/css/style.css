@@ -228,14 +228,15 @@ header .menu-timeline .box.active .punto {
   padding: 0;
   list-style: none;
   display: block;
-  height: 100%;
+  height: auto;
   position: relative;
 }
 #section-timeline ul#carrusel li {
   background: #ff0;
   display: block;
   float: left;
-  height: 100%;
+  height: auto;
+  width: 300px;
   position: relative;
 }
 #section-timeline ul#carrusel li .slide-hover {
@@ -315,6 +316,12 @@ header .menu-timeline .box.active .punto {
 @media only screen and (min-width: 768px) {
   #section-timeline {
     background: #666;
+  }
+  #section-timeline ul#carrusel {
+    height: 100%;
+  }
+  #section-timeline ul#carrusel li {
+    height: 100%;
   }
   #section-timeline ul#carrusel li h5 {
     font-size: 28px;
