@@ -30,8 +30,8 @@
   padding: 0.2em 0;
 }
 body {
-  background: #123150;
   font-family: 'Merriweather', serif;
+  background: #123150;
 }
 body #main-content {
   position: relative;
@@ -218,8 +218,12 @@ header .menu-timeline .box.active .punto {
     width: 100%;
   }
 }
+@media only screen and (min-width: 1400px) {
+  #section-home #img-home {
+    margin-top: 80px;
+  }
+}
 #section-timeline {
-  background: #999;
   width: 100%;
   position: relative;
 }
@@ -330,6 +334,53 @@ header .menu-timeline .box.active .punto {
     font-size: 80px;
     height: 80px;
     line-height: 80px;
+  }
+}
+#section-bottom {
+  position: relative;
+  background: url("../img/back_home800.png");
+  text-align: center;
+  color: #d1b03c;
+  font-style: italic;
+}
+#section-bottom h3 {
+  font-size: 50px;
+}
+#section-bottom #texto1 {
+  font-size: 18px;
+}
+#section-bottom #texto2 {
+  font-size: 13px;
+  font-style: normal;
+  color: #fff;
+}
+#section-bottom #texto1,
+#section-bottom #texto2 {
+  padding: 0 15%;
+}
+#section-bottom #texto3 {
+  font-style: italic;
+  font-size: 20px;
+  color: #d1b03c;
+}
+#section-bottom #logo-compasion {
+  width: 180px;
+  height: 155px;
+  background: url("../img/logo-compasion.png") no-repeat;
+  margin: 0 auto 50px auto;
+}
+@media only screen and (min-width: 768px) {
+  #section-bottom h3 {
+    font-size: 80px;
+  }
+  #section-bottom #texto1 {
+    font-size: 18px;
+  }
+  #section-bottom #texto2 {
+    font-size: 13px;
+  }
+  #section-bottom #texto3 {
+    font-size: 32px;
   }
 }
 #year {

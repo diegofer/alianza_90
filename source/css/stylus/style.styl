@@ -2,11 +2,11 @@
 @import 'utils'
 
 
-body
-    background #123150
+body   
     font-family: 'Merriweather', serif;
-
-    #main-content
+    background #123150
+    
+    #main-content   
         position relative
 
 ////////////  HEADER  ////////////
@@ -169,10 +169,15 @@ header
             bottom 0
             width 100%
 
+@media only screen and (min-width: 1400px) 
+    #section-home
+        #img-home
+            margin-top 80px
+    
+
 ////////////  SLIDE  ////////////
 
 #section-timeline
-    background #999
     width 100%
     position relative
     ul#carrusel
@@ -239,10 +244,6 @@ header
                 transform rotate(-90deg);
                 transform-origin: left bottom 0
 
-        
-
-    
-            
 
 @media only screen and (min-width: 768px)
     #section-timeline
@@ -258,7 +259,62 @@ header
                     font-size 80px
                     height 80px 
                     line-height 80px
-                    
+
+
+
+
+
+////////////  BOTTOM  ////////////
+
+#section-bottom
+    position relative
+    background url(../img/back_home800.png)
+    text-align center
+    color #D1B03C
+    font-style italic
+
+    h3
+        font-size 50px
+        
+    #texto1
+        font-size 18px
+
+    #texto2
+        font-size 13px
+        font-style normal
+        color #fff
+        
+    #texto1
+    #texto2
+        padding 0 15%
+
+    #texto3
+        font-style italic
+        font-size 20px
+        color #D1B03C
+
+    #logo-compasion
+        width 180px
+        height  155px
+        background url(../img/logo-compasion.png) no-repeat
+        margin 0 auto 50px auto
+        
+@media only screen and (min-width: 768px)
+    #section-bottom
+        h3
+            font-size 80px
+            
+        #texto1
+            font-size 18px
+
+        #texto2
+            font-size 13px
+
+        #texto3
+            font-size 32px
+
+
+
 
 ////////////  DETALLE  ////////////
 

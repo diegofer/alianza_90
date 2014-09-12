@@ -9,6 +9,7 @@ define(function (require) {
 		HomeView          = require('app/views/HomeView'),
 		TimeLineView      = require('app/views/TimeLineView'),
 		YearDetalleView   = require('app/views/YearDetalleView'),
+		BottomView        = require('app/views/BottomView'),
 
 		$header           = $('header');
 		
@@ -49,6 +50,12 @@ define(function (require) {
 				contenedorId: '#main-content'
 			});
 			this.actualViews.push(timeLineView);
+
+			var bottomView = new BottomView({
+				contenedorId: '#main-content'
+			});
+			this.actualViews.push(bottomView);
+			console.log(this.actualViews);
 		},
 
 
