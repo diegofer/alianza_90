@@ -26,6 +26,17 @@ define(function (require) {
 		initialize: function(options) {		
 			console.log('inicializando YearDetalleView');
 			this.contenedorId = options.contenedorId;
+
+			var year   = this.model.get('year');
+			var title  = this.model.get('subtitle').substr(0, 100);;
+			var desc   = this.model.get('review_1')
+			var descript = desc.replace(/<\/?[^>]+(>|$)/g, "");   
+
+
+			$("#meta-title").attr('content', title);
+			$("#meta-description").attr('content', descript);
+			$("#meta-img").attr('content', 'http://laalianzacristiana.co/alianza90/img/fotos/'+year+'/imgtop_'+year+'.jpg');
+			$("#meta-url").attr('content', 'http://laalianzacristiana.co/alianza90/#/'+year);
 			
 
 			var self = this;
