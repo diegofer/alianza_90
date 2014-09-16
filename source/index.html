@@ -7,6 +7,13 @@
 
 	<title>Alianza 90 años</title>
 
+	<meta property="og:title" content="Alianza 90 años" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="http://laalianzacristiana.co/alianza90/" />
+	<meta property="og:image" content="http://laalianzacristiana.co/alianza90/img/fotos/1920/imgtop_1920.jpg" />
+
+	<meta property="og:description" content="Los 90 años de la Alianza">
+
 	<!-- <link rel="stylesheet" href="src/bootstrap/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="src/font-awesome/css/font-awesome.min.css">
@@ -26,6 +33,24 @@
 	<!--[if lt IE 9]>
             <p class="browsehappy">Usted esta usando un navegador muy <strong>antiguo</strong> . Por favor <a href="http://browsehappy.com/">actualice su navegador</a> para mejorar la experiencia. se recomienda google chrome o firefox</p>
         <![endif]-->
+
+    <script>
+		window.fbAsyncInit = function() {
+			FB.init({
+			  appId      : '1513804242190802',
+			  xfbml      : true,
+			  version    : 'v2.1'
+			});
+		};
+
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 
 	<header class="clearfix">
 		

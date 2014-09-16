@@ -14,19 +14,17 @@ define(function (require) {
 			console.log('inicializando HeaderView');
             this.render();
 		},
-		
+
+
         events: {
             'click #logo'          : 'irHome',
             'click #timeline-btn'  : 'irTimeline',
-            'click #video-btn'     : 'irVideo',
             'click .box'           : 'goToSlide'
         },
 
         render: function() {
-            //$(document).ready(function(){
             var elem =  this.$el.find('#video-btn').nivoLightbox();
-            //});
-            console.log(elem);
+            //this.setScrollFunctions();
         },
 
 
@@ -37,6 +35,7 @@ define(function (require) {
         		this.doScroll(event.currentTarget.id);  // si estoy en home solo hago scroll hasta el top de home
         	}      	
         },
+
 
         irTimeline: function(event) {
 
@@ -57,15 +56,60 @@ define(function (require) {
         	}      	
         },
 
+
         goToSlide: function(event) {
-            router.navigate(event.currentTarget.id, true);
+            router.navigate('#/'+event.currentTarget.id, true);
         },
 
 
-        irVideo: function() {
+        setScrollFunctions: function() {
 
+            var self      = this,
+                $window   =  $(window),
+                $timeline =  null, 
+                $bottom   =  null, 
+                permit    =  true,
+                ready     =  false;
+
+            
+
+            $window.scroll(function(e){
+
+                if (ready) {
+                    
+                    var scroll      = $window.scrollTop(),
+                        posTimeline = $timeline.position().top,
+                        posBottom   = $bottom.position().top;
+
+                    console.log('SCROLL: '+scroll+' ALTURA: '+posTimeline);
+
+                    if (scroll >= posTimeline && permit) {
+                        self.$el.addClass('header-timeline');
+                        permit = false;
+                    };
+
+
+
+
+                } else{
+
+                    $timeline  = $("#section-bottom") || null;
+                    $bottom    = $("#section-bottom") || null;
+
+                    if ($timeline && $bottom) ready = true;
+                };
+                
+                
+       
+                
+
+                    
+
+
+            });
+
+            
         },
-
 
 
 		doScroll: function(elemId) {

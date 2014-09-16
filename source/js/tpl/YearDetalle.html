@@ -1,4 +1,4 @@
-
+<meta property="og:image" content="http://backbone.dev/alianza_90/source/img/fotos/1920/imgtop_1920.jpg" />
 <section id="year-top" class="browser-height clearfix">
 	
 	<div class="content-img contenedor content-img-top">
@@ -9,6 +9,11 @@
 		<div class="clearfix">
 			
 			<h1 class="clearfix">{{year}} </h1>
+
+			
+			<div  style="width:50px; height:50px; background:red; cursor:pointer;" onclick="alClick();"></div>
+
+
 			<h3> {{ subtitle|safe }} </h3>
 			<img class="img-top" src="img/fotos/{{year}}/{{img_top}}" alt="">
 			<div class="hacer-scroll">
@@ -59,6 +64,22 @@
 	</div>
 	
 </section>
+
+
+
+<script>
+
+	function alClick() {
+		FB.ui({
+		  method: 'share_open_graph',
+		  action_type: 'og.likes',
+		  action_properties: JSON.stringify({
+		      object:'http://laalianzacristiana.co/alianza90/#/1920',
+		  })
+		}, function(response){});
+	}
+
+</script>
 
 
 
