@@ -15,6 +15,12 @@ define(function (require) {
 	    template        =  swig.compile(tpl);
 
 
+	    var $metaTitle       = $("#meta-title"),
+	        $metaDescription = $("#meta-description"),
+	        $metaImagen      = $("#meta-img"),
+	        $metaUrl         = $("#meta-url");
+
+
 
 
 	return  Backbone.View.extend({
@@ -28,15 +34,15 @@ define(function (require) {
 			this.contenedorId = options.contenedorId;
 
 			var year   = this.model.get('year');
-			var title  = this.model.get('subtitle').substr(0, 100);;
-			var desc   = this.model.get('review_1')
+			var title  = this.model.get('subtitle');
+			var desc   = this.model.get('review_1').substr(0, 150);
 			var descript = desc.replace(/<\/?[^>]+(>|$)/g, "");   
 
 
-			$("#meta-title").attr('content', title);
-			$("#meta-description").attr('content', descript);
-			$("#meta-img").attr('content', 'http://laalianzacristiana.co/alianza90/img/fotos/'+year+'/imgtop_'+year+'.jpg');
-			$("#meta-url").attr('content', 'http://laalianzacristiana.co/alianza90/#/'+year);
+			$metaTitle.attr('content', title);
+			$metaDescription.attr('content', descript);
+			$metaImagen.attr('content', 'http://laalianzacristiana.co/alianza90/img/fotos/'+year+'/imgtop_'+year+'.jpg');
+			$metaUrl.attr('content', 'http://laalianzacristiana.co/alianza90/#/'+year);
 			
 
 			var self = this;
