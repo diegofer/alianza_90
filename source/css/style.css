@@ -53,6 +53,13 @@ header #logo {
   cursor: pointer;
   margin-bottom: 10px;
 }
+header #logo a {
+  display: block;
+  width: 60px;
+  height: 41px;
+  text-decoration: none;
+  font-size: 0;
+}
 header .btn-group {
   float: right;
   margin-bottom: 10px;
