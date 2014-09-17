@@ -1,3 +1,26 @@
+<script>
+	console.log('HOLA SOY YO');
+
+	window.fbAsyncInit = function() {
+		FB.init({
+		  appId      : '1513804242190802',
+		  xfbml      : true,
+		  version    : 'v2.1'
+		});
+	};
+
+	(function(d, s, id){
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk.js";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+
+
+</script>
+
+
 <section id="year-top" class="browser-height clearfix">
 	
 	<div class="content-img contenedor content-img-top">
@@ -8,10 +31,6 @@
 		<div class="clearfix">
 			
 			<h1 class="clearfix">{{year}} </h1>
-
-			
-			<div  style="width:50px; height:50px; background:red; cursor:pointer;" onclick="alClick();"></div>
-
 
 			<h3> {{ subtitle|safe }} </h3>
 			<img class="img-top" src="img/fotos/{{year}}/{{img_top}}" alt="">
@@ -30,8 +49,8 @@
 
 		{% for key, img in slide %}	
 	  		<li>
-				<a class="destacar" href="img/{{img.path}}" data-lightbox-gallery="gallery1" title="{{img.caption}}">
-					<img id="{{key}}" src="img/{{img.path}}" title="hola soy caption"/>
+				<a class="destacar" href="img/fotos/{{year}}/{{img.path}}" data-lightbox-gallery="gallery1" title="{{img.caption}}">
+					<img id="{{key}}" src="img/fotos/{{year}}/{{img.path}}" alt="{{img.caption}}"/>
 				</a>
 				<span>{{img.caption}}</span>
 			</li>
@@ -64,24 +83,10 @@
 	
 </section>
 
+<div  style="width:50px; height:50px; background:red; cursor:pointer;" onclick="alClick();"></div>
 
-<script>
-	window.fbAsyncInit = function() {
-		FB.init({
-		  appId      : '1513804242190802',
-		  xfbml      : true,
-		  version    : 'v2.1'
-		});
-	};
 
-	(function(d, s, id){
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) {return;}
-		js = d.createElement(s); js.id = id;
-		js.src = "//connect.facebook.net/en_US/sdk.js";
-		fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));
-</script>
+
 
 
 

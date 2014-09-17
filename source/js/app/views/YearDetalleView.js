@@ -12,15 +12,9 @@ define(function (require) {
 	    swig            = require('swig'),    
 	    tpl             = require('text!tpl/YearDetalle.html'),
 
-	    template        =  swig.compile(tpl);
+	    template        =  swig.compile(tpl),
 
-
-	    var $metaTitle       = $("#meta-title"),
-	        $metaDescription = $("#meta-description"),
-	        $metaImagen      = $("#meta-img"),
-	        $metaUrl         = $("#meta-url");
-
-
+	    $head = $('head');
 
 
 	return  Backbone.View.extend({
@@ -38,11 +32,14 @@ define(function (require) {
 			var desc   = this.model.get('review_1').substr(0, 150);
 			var descript = desc.replace(/<\/?[^>]+(>|$)/g, "");   
 
+			var metas = '<meta class="mis-metas" property="og:title"       content="'+title+'" />';
+			metas    += '<meta class="mis-metas" property="og:type"        content="website" />';
+			metas    += '<meta class="mis-metas" property="og:site_name"   content="Alianza 90" />';
+			metas    += '<meta class="mis-metas" property="og:image"       content="http://laalianzacristiana.co/alianza90/img/fotos/'+year+'/imgtop_'+year+'.jpg" />';
+			metas    +=	'<meta class="mis-metas" property="og:description" content="'+descript+'">';
+			metas    += '<meta class="mis-metas" property="og:url"         content="http://laalianzacristiana.co/alianza90/#/'+year+'">';
 
-			$metaTitle.attr('content', title);
-			$metaDescription.attr('content', descript);
-			$metaImagen.attr('content', 'http://laalianzacristiana.co/alianza90/img/fotos/'+year+'/imgtop_'+year+'.jpg');
-			$metaUrl.attr('content', 'http://laalianzacristiana.co/alianza90/#/'+year);
+			$head.append(metas);
 			
 
 			var self = this;
@@ -86,11 +83,15 @@ define(function (require) {
 				responsive: true,
 				width: '100%',
 				//height: 'auto',
-    			//prev: '#prev2',
-				//next: '#next2',
+    			prev: '#prev2',
+				next: '#next2',
 				auto: true,
 
-				scroll: 1,
+				scroll: {
+					items           : 1,
+		            duration        : 1000,                         
+		            pauseOnHover    : true
+				},
 				items: {
 					//width: widthSlide,
 					height: 'auto',
@@ -117,7 +118,12 @@ define(function (require) {
     		this.$el.find('.destacar').nivoLightbox({
     			effect: 'fadeScale', 
     		});
-		}
+		},
+
+		onClose: function() {
+			FB._initialized = false;
+			$head.find('.mis-metas').remove();
+	    }
 
 
 	});

@@ -15,16 +15,12 @@
         "slide": { 
 
             "img1": {
-                "path": "test1.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_01.jpg",
+                "caption": "A la izquierda,Don Otto con su primera esposa Angelina y su hija Betty. 1928 / A la derecha, Rev. Homero Crisman y la Sra. Leticia de Crisman. 1929"
             },
             "img2": {
-                "path": "test2.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
-            },
-            "img3": {
-                "path": "test3.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_02.jpg",
+                "caption": "Don Otto viajando a Caballo.1929"
             }
 
         }
@@ -45,16 +41,28 @@
         "slide": { 
 
             "img1": {
-                "path": "test1.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_01.jpg",
+                "caption": "A la izquierda, La Señora madre de Don Aquileo González junto con él. Ella fue la primera creyente en Tumaco, Nariño y él fue el primer obrero laico en la costa del Pacífico. 1936 / A la derecha la fundadora del colegio Jorge Isaacs Elizabeth Marstaller"
             },
             "img2": {
-                "path": "test2.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_02.jpg",
+                "caption": "Don Clyde Taylor predicando en el entierro de Enrique Fast. 1939"
             },
             "img3": {
-                "path": "test3.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_03.jpg",
+                "caption": "La construcción del Instituto Bíblico en Armenia. Construcción en guagua y madera. 1939"
+            },
+            "img4": {
+                "path": "img_04.jpg",
+                "caption": "La congregación con su templo en Betania, Caldas. La iglesia fue construida y regalada por un creyente. 1938"
+            },
+            "img5": {
+                "path": "img_05.jpg",
+                "caption": "Profesores y estudiantes del Instituto Bíblico de Armenia.1938"
+            },
+            "img5": {
+                "path": "img_05.jpg",
+                "caption": "Primera conferencia de la Misión Colombiana de la AC&M. Primera fila: izquierda a derecha - Ruth Taylor, Cora Murdock (Zook), Juanita Searing, Leticia Crisman, Helena Constance y la Sra. Feldges. Segunda fila: Enrique Fast, Betty Marstallar, Roberto Searing, padre, Don Pedro Zook, Don Jorge Constance, Dr. Alfredo Snead, el Sr. Feldges y Elsa Bauman. 1937"
             }
 
         }
@@ -77,18 +85,33 @@
         "slide": { 
 
             "img1": {
-                "path": "test1.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_01.jpg",
+                "caption": "A la izquierda, Primer matrimonio Aliancista en Colombia, don Ramón López y Ernestina Coy. 1940 / A la derecha, Un viaje a caballo a una iglesia rural cruzado el río. 1945"
             },
             "img2": {
-                "path": "test2.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_02.jpg",
+                "caption": "Don Otto esperando el tren para ir a Armenia desde Piendamó. 1946"
             },
             "img3": {
-                "path": "test3.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_03.jpg",
+                "caption": "Don Oscar Jacobson bautizando al primer creyente Gaumbiano - Don Feliciano Tenebuel en el Río Piendamó. 1946"
+            },
+            "img4": {
+                "path": "img_04.jpg",
+                "caption": "Segunda graduación del Instituto. De izquierda a derecha: Anastacio Morales, Edilma Muñoz, Isauro Prieto, Jorge Lozada, Misael Arango, Ernesto Viera, Elvira Viera y Marcos Murcia. 1942"
+            },
+            "img5": {
+                "path": "img_05.jpg",
+                "caption": "Cuarta Conferencia Misionera. Primera fila -de izquierda a derecha- Ruth de Taylor, Cora Murdock (Zook), Ruth Tennies, Edna Prentice, Adela Smith, Amy Perry y Helena Constance. Segunda fila: Clyde Taylor, Betty Marstallar, Leo Tennies, Manuel Prentice, Federico Smith, Ricardo Perry, Elsa Bauman, Jorge Constance. 1941"
+            },
+            "img6": {
+                "path": "img_06.jpg",
+                "caption": "Indígenas Guambianas. 1940"
+            },
+            "img7": {
+                "path": "img_07.jpg",
+                "caption": "Los primeros 3 graduados del Instituto Bíblico de Armenia. De izquierda a derecha: Don Pastor Martínez, Don Ramón López y Don Josué Leal. 1940"
             }
-
         }
     },
     {   "year": 1950,
@@ -109,16 +132,28 @@
         "slide": { 
 
             "img1": {
-                "path": "test1.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_01.jpg",
+                "caption": "La librería en Cali con Don Roberto Searing, padre. 1959"
             },
             "img2": {
-                "path": "test2.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_02.jpg",
+                "caption": "La iglesia Central de Cali en sus comienzos en una bodega. 1956"
             },
             "img3": {
-                "path": "test3.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_03.jpg",
+                "caption": "La primera iglesia de la Alianza en Buenaventura. 1955"
+            },
+            "img4": {
+                "path": "img_04.jpg",
+                "caption": "Se comienza el ministerio de la lancha “El Faro” por el pacífico. 1954"
+            },
+            "img5": {
+                "path": "img_05.jpg",
+                "caption": "Estudiantes y facultad del Instituto Bíblico. 1953"
+            },
+            "img6": {
+                "path": "img_06.jpg",
+                "caption": "La congregación con su templo en Génova, poco antes de ser quemada en La Violencia. 1950"
             }
 
         }
@@ -141,16 +176,24 @@
         "slide": { 
 
             "img1": {
-                "path": "test1.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_01.jpg",
+                "caption": "La Señorita Mariana Slocum del Instituto Lingüístico de Verano enseñando a los Paéz leer su propia lengua en Tarabira, Tierradentro, Cauca. 1967"
             },
             "img2": {
-                "path": "test2.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_02.jpg",
+                "caption": "Conferencia Misionera. Primera fila -de izquierda a derecha- Arline de Wesrmeier, Pelma Volstad, Catalina Garland, Betty Wisw, Graciela Kelly, Eugenio Kellty, Evelina Prince, Graciela Scudder, Margarita Jones, Mina Jacobson. Segunda fila: Carlos Westmeier, Carlos Volstad, Heriberto"
             },
             "img3": {
-                "path": "test3.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_03.jpg",
+                "caption": "El Rev. Heriberto Garland fue Rector del SEBAC. 1964"
+            },
+            "img4": {
+                "path": "img_04.jpg",
+                "caption": "Un cursillo bíblico en Villa Garzón, Putumayo. 1962"
+            },
+            "img5": {
+                "path": "img_05.jpg",
+                "caption": "La Alianza inició obra en Bogotá, con la iglesia de La fraguita con pastor Elías Martínez. 1960"
             }
 
         }
@@ -173,18 +216,41 @@
         "slide": { 
 
             "img1": {
-                "path": "test1.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_01.jpg",
+                "caption": "A la izquierda, Deyda de Alvarez, esposa de pastor, fue la presidenta de MONADAL. 1973 / En el centro, Rosa de Manchola fue la presidenta de MONADAL. 1977 / A la derecha, Se inició la Iglesia en Suba, Bogotá con el Rev. Gonzalo Restrepo como Pastor Titular. 1978"
             },
             "img2": {
-                "path": "test2.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_02.jpg",
+                "caption": "Seminario Bíblico Alianza de Colombia. 1973"
             },
             "img3": {
-                "path": "test3.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_03.jpg",
+                "caption": "Seminario Bíblico Alianza de Colombia. 1973"
+            },
+            "img4": {
+                "path": "img_04.jpg",
+                "caption": "Seminario Bíblico Alianza de Colombia. 1973"
+            },
+            "img5": {
+                "path": "img_05.jpg",
+                "caption": "En el devocional, Seminario Bíblico Alianza de Colombia. 1973"
+            },
+            "img6": {
+                "path": "img_06.jpg",
+                "caption": "Descanso, Seminario Bíblico Alianza de Colombia. 1973"
+            },
+            "img7": {
+                "path": "img_07.jpg",
+                "caption": "Elizabeth Marstaller junto algunos de los estudiantes del Colegio Jorge Isaacs, el cual fue fundado por ella."
+            },
+            "img8": {
+                "path": "img_08.jpg",
+                "caption": "Los nuevos edificios del Seminario Bíblico en Armenia. Hoy en día Colegio Jorge Isaacs y también las oficinas de la Alianza Cristiana y Misionera Colombiana. 1974"
+            },
+            "img9": {
+                "path": "img_09.jpg",
+                "caption": "El SEBAC, Seminario Bíblico Alianza, se traslada a su nueva sede en el Norte de Armenia. Actualmente, Colegio Jorge Isaacs y Oficina Nacional. 1974"
             }
-
         }
     },
     {   "year": 1980,
@@ -205,18 +271,49 @@
         "slide": { 
 
             "img1": {
-                "path": "test1.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_01.jpg",
+                "caption": "Teodoro Marin, rector del SEBAC"
             },
             "img2": {
-                "path": "test2.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_02.jpg",
+                "caption": "Seminario Bíblico Alianza de Colombia en 1983."
             },
             "img3": {
-                "path": "test3.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_03.jpg",
+                "caption": "Seminario Bíblico Alianza de Colombia en 1983."
+            },
+            "img4": {
+                "path": "img_04.jpg",
+                "caption": "Seminario Bíblico Alianza de Colombia en 1983."
+            },
+            "img5": {
+                "path": "img_05.jpg",
+                "caption": "Ministerio de niños Lumbreras del Futuro. 1989"
+            },
+            "img6": {
+                "path": "img_06.jpg",
+                "caption": "Seminario Bíblico Alianza de Colombia en 1983."
+            },
+            "img8": {
+                "path": "img_08.jpg",
+                "caption": "Seminario Bíblico Alianza de Colombia en 1983."
+            },
+            "img9": {
+                "path": "img_09.jpg",
+                "caption": "Seminario Bíblico Alianza de Colombia en 1983."
+            },
+            "img11": {
+                "path": "img_11.jpg",
+                "caption": "Estudiantes Seminario Bíblico Alianza de Colombia en 1983."
+            },
+            "img12": {
+                "path": "img_12.jpg",
+                "caption": "El Rev. Eynar Mina fue Rector del SEBAC. 1984"
+            },
+            "img13": {
+                "path": "img_13.jpg",
+                "caption": "Ministerio de niños Lumbreras del Futuro. 1991"
             }
-
         }
     },
     {   "year": 1990,
@@ -237,18 +334,57 @@
         "slide": { 
 
             "img1": {
-                "path": "test1.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_01.jpg",
+                "caption": "Ministerio de niños Lumbreras del Futuro. 1991"
             },
             "img2": {
-                "path": "test2.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_02.jpg",
+                "caption": "Construcciòn de Ebenzer. 1992"
             },
             "img3": {
-                "path": "test3.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_03.jpg",
+                "caption": "Construcción de Ebenzer. 1992"
+            },
+            "img4": {
+                "path": "img_04.jpg",
+                "caption": "Construcciòn de Ebenzer. 1992"
+            },
+            "img5": {
+                "path": "img_05.jpg",
+                "caption": "Construcciòn de Ebenzer. 1992"
+            },
+            "img6": {
+                "path": "img_06.jpg",
+                "caption": "Bus escolar del Colegio Jorge Isaacs. 1988-1999"
+            },
+            "img7": {
+                "path": "img_07.jpg",
+                "caption": "Nora Tovar Rectora del Colegio Jorge Isaacs de 1981'1984."
+            },
+            "img8": {
+                "path": "img_08.jpg",
+                "caption": "Pastores cenando en El Campamento Ebenezer, Circasia, Quindío. 1998"
+            },
+            "img9": {
+                "path": "img_09.jpg",
+                "caption": "Se inició el ministerio de la Red de Oración, dirigido por el Rev. Omar Oviedo. 1998"
+            },
+            "img10": {
+                "path": "img_10.jpg",
+                "caption": "En Ebenezer se autorizó la realización de la piscina. 1997"
+            },
+            "img11": {
+                "path": "img_11.jpg",
+                "caption": "Elizabeth Marstaller en las instalaciones del Colegio Jorge Isaacs con algunos de sus estudiantes."
+            },
+            "img12": {
+                "path": "img_12.jpg",
+                "caption": "Estudiantes del Colegio Jorge Isaacs 1988-1999."
+            },
+            "img13": {
+                "path": "img_13.jpg",
+                "caption": "Personal Colegio Jorge Isaacs 1988-1999."
             }
-
         }
     },
     {   "year": 2000,
@@ -269,18 +405,117 @@
         "slide": { 
 
             "img1": {
-                "path": "test1.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_01.jpg",
+                "caption": "Misiones - Yasna Concha orando. 2014"
             },
             "img2": {
-                "path": "test2.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_02.jpg",
+                "caption": "Red de Oración"
             },
             "img3": {
-                "path": "test3.jpg",
-                "caption": "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Laetetur vetuit"
+                "path": "img_03.jpg",
+                "caption": "Misiones en Cartagena - Pastores. 2014"
+            },
+            "img4": {
+                "path": "img_04.jpg",
+                "caption": "Misiones en el Pacífico - Hombres Orando. 2014"
+            },
+            "img5": {
+                "path": "img_05.jpg",
+                "caption": "Misiones en el Charco - Mujeres Orando. 2014"
+            },
+            "img6": {
+                "path": "img_06.jpg",
+                "caption": "Misiones en Popayán. 2014"
+            },
+            "img7": {
+                "path": "img_07.jpg",
+                "caption": "Estudiantes del Colegio Jorge Isaacs 2014"
+            },
+            "img8": {
+                "path": "img_08.jpg",
+                "caption": "Semana cultural del Colegio Jorge isaacs. 2010"
+            },
+            "img9": {
+                "path": "img_09.jpg",
+                "caption": "Congreso Regional Mujeres Sur. 2012"
+            },
+            "img10": {
+                "path": "img_10.jpg",
+                "caption": "Congreso Regional Alianza Joven Occidente. 2014"
+            },
+            "img11": {
+                "path": "img_11.jpg",
+                "caption": "Congreso nacional de mujeres 2011"
+            },
+            "img12": {
+                "path": "img_12.jpg",
+                "caption": "Congreso nacional de mujeres 2011"
+            },
+            "img13": {
+                "path": "img_13.jpg",
+                "caption": "Congreso nacional de mujeres 2013"
+            },
+            "img14": {
+                "path": "img_14.jpg",
+                "caption": "Congreso nacional de mujeres 2013"
+            },
+            "img15": {
+                "path": "img_15.jpg",
+                "caption": "Congreso Nacional Alianza Joven Conexión Bogotá. 2014"
+            },
+            "img16": {
+                "path": "img_16.jpg",
+                "caption": "Se elevo una oración de gracias por la misionera Maria Luisa Cipagauta"
+            },
+            "img17": {
+                "path": "img_17.jpg",
+                "caption": "Congreso Regional Valle. 2014"
+            },
+            "img18": {
+                "path": "img_18.jpg",
+                "caption": "Congreso Región Sur. 2014"
+            },
+            "img19": {
+                "path": "img_19.jpg",
+                "caption": "Templo construido en convenio con ICM. 2013"
+            },
+            "img22": {
+                "path": "img_22.jpg",
+                "caption": "Seminario Bíblico Alianza - Programa a Distancia en Santander Cauca. 2013"
+            },
+            "img24": {
+                "path": "img_24.jpg",
+                "caption": "El comedor antiguo de Ebenezer fue demolido y se construyó uno con capacidad para 250 personas y 13 habitaciones individuales. 2000"
+            },
+            "img25": {
+                "path": "img_25.jpg",
+                "caption": "Grupo de alabanza, congreso nacional de mujeres 2013"
+            },
+            "img26": {
+                "path": "img_26.jpg",
+                "caption": "Promoción Nacional Licenciatura en Biblia y Teología. 2005"
+            },
+            "img27": {
+                "path": "img_27.jpg",
+                "caption": "Congreso nacional de jovenes conexión 2013. Jason Ostrander y Edwin Guzmán"
+            },
+            "img28": {
+                "path": "img_28.jpg",
+                "caption": "Congreso Nacional Alianza Joven Conexión. – Abel Zavala 2013"
+            },
+            "img29": {
+                "path": "img_29.jpg",
+                "caption": "Actualización Pastoral 2013. Entrega de escalafones"
+            },
+            "img30": {
+                "path": "img_30.jpg",
+                "caption": "Congreso región Central - Tolú, Coveñas. 2012"
+            },
+            "img31": {
+                "path": "img_31.jpg",
+                "caption": "Colegio Jorge Isaacs en el 2010."
             }
-
         }
     }    
     
