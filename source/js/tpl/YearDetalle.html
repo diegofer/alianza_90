@@ -93,19 +93,19 @@
 <script>
 
 	function alClick() {
-		// FB.ui({
-		//   method: 'share_open_graph',
-		//   action_type: 'og.likes',
-		//   action_properties: JSON.stringify({
-		//       object:'http://laalianzacristiana.co/alianza90/#/{{year}}',
-		//   })
-		// }, function(response){});
-
-
 		FB.ui({
-		  method: 'share',
-		  href: 'http://laalianzacristiana.co/alianza90/#/{{year}}',
+		   method: 'share_open_graph',
+		   action_type: 'og.likes',
+		   action_properties: JSON.stringify({
+		       object:'http://laalianzacristiana.co/alianza90/#/{{year}}',
+		   })
 		}, function(response){});
+
+
+		// FB.ui({
+		//   method: 'share',
+		//   href: 'http://laalianzacristiana.co/alianza90/#/{{year}}',
+		// }, function(response){});
 	}
 
 

@@ -32,14 +32,14 @@ define(function (require) {
 			var desc   = this.model.get('review_1').substr(0, 150);
 			var descript = desc.replace(/<\/?[^>]+(>|$)/g, "");   
 
-			var metas = '<meta class="mis-metas" property="og:title"       content="'+title+'" />';
-			metas    += '<meta class="mis-metas" property="og:type"        content="website" />';
-			metas    += '<meta class="mis-metas" property="og:site_name"   content="Alianza 90" />';
-			metas    += '<meta class="mis-metas" property="og:image"       content="http://laalianzacristiana.co/alianza90/img/fotos/'+year+'/imgtop_'+year+'.jpg" />';
-			metas    +=	'<meta class="mis-metas" property="og:description" content="'+descript+'">';
-			metas    += '<meta class="mis-metas" property="og:url"         content="http://laalianzacristiana.co/alianza90/#/'+year+'">';
+			// var metas = '<meta class="mis-metas" property="og:title"       content="'+title+'" />';
+			// metas    += '<meta class="mis-metas" property="og:type"        content="website" />';
+			// metas    += '<meta class="mis-metas" property="og:site_name"   content="Alianza 90" />';
+			// metas    += '<meta class="mis-metas" property="og:image"       content="http://laalianzacristiana.co/alianza90/img/fotos/'+year+'/imgtop_'+year+'.jpg" />';
+			// metas    +=	'<meta class="mis-metas" property="og:description" content="'+descript+'">';
+			// metas    += '<meta class="mis-metas" property="og:url"         content="http://laalianzacristiana.co/alianza90/#/'+year+'">';
 
-			$head.prepend(metas);
+			//$head.prepend(metas);
 			
 
 			var self = this;
@@ -122,7 +122,7 @@ define(function (require) {
 
 		onClose: function() {
 			FB._initialized = false;
-			$head.find('.mis-metas').remove();
+			//$head.find('.mis-metas').remove();
 	    }
 
 
