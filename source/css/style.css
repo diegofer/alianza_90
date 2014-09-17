@@ -92,6 +92,9 @@ header .menu-timeline .box {
   -o-transition: font-size 200ms linear;
   -ms-transition: font-size 200ms linear;
   transition: font-size 200ms linear;
+  text-decoration: none;
+  display: block;
+  color: #000;
 }
 header .menu-timeline .box:hover {
   color: #555;
@@ -389,6 +392,14 @@ header .menu-timeline .box.active .punto {
 }
 #year {
   background: url("../img/backinterna.jpg");
+}
+#year #redes {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+#year #redes #face {
+  cursor: pointer !important;
 }
 #year #year-top .content-img img,
 #year #year-bottom .content-img img {

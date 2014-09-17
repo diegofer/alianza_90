@@ -30,7 +30,7 @@ define(function (require) {
 		},
 
 		events: {
-			'click': 'goTo'
+			//'click': 'goTo'
 		},
 		
 

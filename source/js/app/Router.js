@@ -30,7 +30,7 @@ define(function (require) {
 
 		routes: {
 			''           :'inicio',
-			':number'   : 'year'
+			//':number'   : 'year'
 		},
 
 
@@ -69,15 +69,17 @@ define(function (require) {
 
 			this.closeActualViews();
 
-			$header.addClass('header-year');   // mostramos el menu en el header
-			this.headerView.selectBoxItem(yearModel.get('year'));  // destacamos el elemento activo
+			window.location.href = '1920.html';
 
-			var yearDetalleView = new YearDetalleView({
-				model        :yearModel,
-				contenedorId :'#main-content'
-			});
+			// $header.addClass('header-year');   // mostramos el menu en el header
+			// this.headerView.selectBoxItem(yearModel.get('year'));  // destacamos el elemento activo
 
-			this.actualViews.push(yearDetalleView);
+			// var yearDetalleView = new YearDetalleView({
+			// 	model        :yearModel,
+			// 	contenedorId :'#main-content'
+			// });
+
+			// this.actualViews.push(yearDetalleView);
 		},
 
 
