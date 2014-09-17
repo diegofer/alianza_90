@@ -39,7 +39,7 @@ define(function (require) {
 			metas    +=	'<meta class="mis-metas" property="og:description" content="'+descript+'">';
 			metas    += '<meta class="mis-metas" property="og:url"         content="http://laalianzacristiana.co/alianza90/#/'+year+'">';
 
-			$head.append(metas);
+			$head.prepend(metas);
 			
 
 			var self = this;
