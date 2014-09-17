@@ -397,6 +397,7 @@ header .menu-timeline .box.active .punto {
   position: fixed;
   right: 20px;
   bottom: 20px;
+  z-index: 999;
 }
 #year #redes #face {
   cursor: pointer !important;

@@ -10,7 +10,7 @@
 	<meta class="mis-metas" property="og:title" content="¡Lluvia de Piedras, Lluvia de Gracia!">
 	<meta class="mis-metas" property="og:site_name" content="Alianza 90">
 	<meta class="mis-metas" property="og:type" content="website">
-	<meta class="mis-metas" property="og:image" content="http://laalianzacristiana.co/alianza90/img/fotos/1920/imgtop_1920.jpg">
+	<meta class="mis-metas" property="og:image" content="http://laalianzacristiana.co/alianza90/img/fotos/1920/img_01.jpg">
 	<meta property="og:url" content="http://laalianzacristiana.co/alianza90/1920.html" />
 
 	<meta class="mis-metas" property="og:description" content="“!Fuera los Protestantes! ¡Abajo los masones! ¡Que viva la Virgen!” gritaba la turba enfurecida mientras lanzaban piedras al Rev. Homero Crisman; los siete kilómetros desde Tulcán hasta la frontera Colombiana se convirtieron en el corredor de la gracia divina para el Sur Colombiano.">
@@ -204,6 +204,16 @@
 		    }).ajaxStop(function(){
 		        //console.log('termino ajax');
 		        $('.spiner').hide();
+		    });
+		    
+		    $(window).resize(function(){
+		    	var height = $(window).height();
+			    var width  =  $(window).width();
+			    if (width >= 768) {
+			    	 $('.browser-height').height(height);
+			    } else {
+			    	$('.browser-height').height('auto');
+			    }
 		    });
 
 			var browserHeight = $(window).height(), // Obtenemos la altura del browser
