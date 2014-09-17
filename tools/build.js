@@ -6,7 +6,7 @@
 	mainConfigFile: '../source/js/app.js',
 
 	stubModules: ['text'],
-	removeCombined: true,
+	//removeCombined: true,
 	optimizeCss: "standard",
 
 	modules: [
