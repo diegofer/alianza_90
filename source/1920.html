@@ -68,7 +68,7 @@
 
 		<div class="btn-group">		
 			<a id="timeline-btn" href="http://laalianzacristiana.co/alianza90" class="btn btn-gold">LÍNEA DE TIEMPO</a>
-	    	<!-- <a id="video-btn" href="http://youtu.be/JXw8U45NHsI" class="btn btn-gold">VIDEO</a> -->
+	    	<a id="video-btn" href="http://youtu.be/eFZHfmXbI9E" class="btn btn-gold">VIDEO</a> 
 		</div>
 
 		<div class="menu-timeline">
@@ -202,6 +202,8 @@
 
 		$(document).ready(function(){
 
+			$('#video-btn').nivoLightbox();
+
 			$(document).ajaxStart(function(){
 		        //console.log('empezo ajax');
 		        $('.spiner').show();
@@ -261,6 +263,8 @@
 						enable:false
 					}
 				});
+
+
 
 				$yearSlide.find('.destacar').nivoLightbox({
 	    			effect: 'fadeScale', 
