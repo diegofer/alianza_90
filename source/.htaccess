@@ -1,0 +1,10 @@
+Options +FollowSymLinks
+RewriteEngine on
+# RewriteCond %{HTTP_HOST} ^example.com$ [NC]
+# RewriteRule ^(.*)$ http://www.example.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
+
+RewriteBase /alianza90
+
+
