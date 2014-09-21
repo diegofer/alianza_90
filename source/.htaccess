@@ -1,5 +1,6 @@
 <IfModule mod_speling.c>
 	CheckSpelling on
+	CheckCaseOnly On
 </IfModule>
 
 Options +FollowSymLinks
