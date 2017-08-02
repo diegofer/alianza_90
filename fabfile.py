@@ -35,7 +35,7 @@ def stylus_build():
 ####################################################
 ##              SERVIDOR DE PRODUCCION            ##
 ####################################################
-env.hosts = ['alianza@web348.webfaction.com']
+env.hosts = ['alianza@web523.webfaction.com']
 
 ROOT_PATH   = '/home/alianza/produccion/alianza_90'
 NODE_EXEC  = '/home/alianza/webapps/alliance_node/bin/node'
